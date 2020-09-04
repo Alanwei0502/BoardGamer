@@ -6,9 +6,9 @@ html{
   box-sizing: border-box;
 }
 .wrap{
-  max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
-  min-width: 1920px;
+  min-width: 1550px;
   background-image: url('../images/member/bg1.png');
   height: 100vh;
 }
@@ -129,7 +129,7 @@ section.small_cards{
 .invitation{
   z-index: 7;
   right: 1rem;
-  transform: rotate(40deg) translateY(8rem) translateX(-6rem);
+  transform: rotate(40deg) translateY(10rem) translateX(-5rem);
   transition: .3s;
 }
 .invitation:hover{
@@ -140,7 +140,7 @@ button{
   color: #2f375b;
   position: absolute;
   top: 1%;
-  left: 1%;
+  right: 1%;
   background-color: transparent;
   border: 0;
   outline: none;
@@ -152,7 +152,6 @@ button:hover{
 }
 .title{
   background-color: #fec240;
-  text-align: right;
   font-size: 2rem;
   font-weight: bold;
   padding: 1rem;

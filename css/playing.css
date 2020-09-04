@@ -7,7 +7,7 @@ html{
   box-sizing: border-box;
 }
 .wrap{
-  max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
   min-width: 1300px;
 }
@@ -30,7 +30,7 @@ nav.filter a{
   background-color: #fec240;
   text-decoration: none;
   color: #2f375b;
-  font-size: 3rem;
+  font-size: 2rem;
   padding: .5rem  2rem;
   border-radius: 1.5rem;
   font-weight: bold;
@@ -46,8 +46,8 @@ nav.filter a.cross{
   border: 0;
   border-radius: 50%;
   background-color: #de4b43;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
 }
 nav.filter a.cross img{
   width: 100%;

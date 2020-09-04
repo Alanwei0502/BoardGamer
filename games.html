@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BoardGamer | 桌遊教室</title>
   <link rel="shortcut icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./css/bg_games.css">
+  <link rel="stylesheet" href="./css/games.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <div class="wrap">
@@ -170,41 +171,45 @@
         <label for="search">直接搜尋
           <div class="search_icon">
             <input type="text"><img src="./images/games/search.png" alt=""></div>
-        </label>
-        <label for="type">遊戲類型</label>
-        <select name="type" id="type">
-          <option value=""></option>
-          <option value="">派對</option>
-          <option value="">策略</option>
-          <option value="">反應</option>
-          <option value="">陣營</option>
-          <option value="">猜心</option>
-          <option value="">合作</option>
-        </select>
-
-        <label for="people">玩家人數</label for="people">
-          <select name="people" id="people">
+          </label>
+          <label for="type">遊戲類型</label>
+          <select name="type" id="type">
             <option value=""></option>
-            <option value="">2</option>
-            <option value="">3</option>
-            <option value="">4</option>
-            <option value="">5</option>
-            <option value="">6</option>
-            <option value="">7</option>
+            <option value="">派對</option>
+            <option value="">策略</option>
+            <option value="">反應</option>
+            <option value="">陣營</option>
+            <option value="">猜心</option>
+            <option value="">合作</option>
           </select>
 
-          <label for="playtime">遊玩時間</label>
-          <select name="playtime" id="playtime">
-            <option value=""></option>
-            <option value="">15分鐘</option>
-            <option value="">30分鐘</option>
-            <option value="">60分鐘</option>
-            <option value="">90分鐘</option>
-            <option value="">120分鐘</option>
-          </select>
+          <label for="people">玩家人數</label for="people">
+            <select name="people" id="people">
+              <option value=""></option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+              <option value="">7</option>
+            </select>
 
-        </aside>
-      </main>
-    </div>
+            <label for="playtime">遊玩時間</label>
+            <select name="playtime" id="playtime">
+              <option value=""></option>
+              <option value="">15分鐘</option>
+              <option value="">30分鐘</option>
+              <option value="">60分鐘</option>
+              <option value="">90分鐘</option>
+              <option value="">120分鐘</option>
+            </select>
+
+          </aside>
+        </main>
+      </div>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
   </body>
   </html>

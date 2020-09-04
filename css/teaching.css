@@ -6,7 +6,7 @@ html{
   background-color: #2f375b;
 }
 .wrap{
-  width: 1902px;
+  width: 100%;
   background-image: url('../images/teaching/letters.jpg');
   min-width: 1300px;
 }

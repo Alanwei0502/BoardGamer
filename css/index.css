@@ -7,7 +7,7 @@ html{
 }
 
 .wrap{
-  max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
   min-width: 1300px;
   /* border: 1px solid red; */
@@ -38,8 +38,7 @@ a.social img{
   padding: 1rem;
 }
 header a:hover{
-  animation-name: bounce;
-  animation-duration: .8s;
+  animation: bounce .8s infinite;
 }
 @keyframes bounce {
   25%{
@@ -58,7 +57,6 @@ header a:hover{
 
 div.logo{
   width: 25%;
-  /* border: 1px solid green; */
   left: 0;
   top: 0;
   padding: 1rem;
@@ -90,7 +88,6 @@ div.logo .introduction{
   width: 2px;
   animation: loading linear 2s infinite;
 }
-
 @keyframes loading{
   0%{
     transform: translateY(0);
@@ -108,19 +105,14 @@ div.logo h1{
 div.logo h1 a{
   display: block;
   border-radius: 50%;
-  animation-name: rotating;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 3s;
+  animation: rotating 3s infinite linear;
 }
 div.logo h1 a img{
   width: 100%;
 }
 div.logo h1 a:active{
-  animation-name: rotating;
-  animation-duration: 1s;
+  animation: rotating 1s;
 }
-
 @keyframes rotating {
   0%{
     transform: rotateY(0deg);
@@ -131,16 +123,13 @@ div.logo h1 a:active{
 }
 
 main{
-  /* border: 1px solid pink; */
   display: flex;
   margin-bottom: 4rem;
 }
 main nav{
   display: flex;
-  /* border: 1px solid yellow; */
   width: 75%;
 }
-
 main nav ul{
   display: flex;
   width: 100%;
@@ -149,10 +138,8 @@ main nav ul li{
   width: 33.33333%;
 }
 main nav li a{
-  /* border: 1px solid blue; */
   background-repeat: no-repeat;
   display: inline-block;
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -162,7 +149,6 @@ main nav li a{
 main nav li a.finding_store{
   background-image: url('../images/home/store.jpg');
 }
-
 main nav li a.playing_game{
   background-image: url('../images/home/playing_board_games.jpg');
 }
@@ -213,10 +199,6 @@ main nav li a.game_tutorial{
 
 
 /* 最新消息 */
-.news{
-  /* border: 1px solid purple; */
-}
-
 h3{
   color: #fec240;
   font-size: 2em;
@@ -229,11 +211,9 @@ h3:before{
   width: 30px;
   margin-right: 1rem;
 }
-
 .news h3:before{
   background-image: url('../images/home/title_icon.png');
 }
-
 .news div.slider{
   overflow: hidden;
   background-color: #000;
@@ -241,11 +221,14 @@ h3:before{
   padding: 2em 0;
   position: relative;
   white-space: nowrap;
-  /* border: 1px solid red; */
 }
 .slider-row{
   height: 250px;
   position: relative;
+}
+.news1, .news2, .news3, .news4, .news5{
+  animation: slide 15s linear infinite;
+  position: absolute;
 }
 a.news1{
   animation: slide 15s linear infinite;
@@ -267,8 +250,7 @@ a.news4{
   animation-delay: -9s;
 }
 a.news5{
-  animation: slide 15s linear infinite;
-  position: absolute;
+
   animation-delay: -12s;
 }
 @keyframes slide {
@@ -433,6 +415,7 @@ div.slider-row a.news5{
 }
 .go_top:hover img{
   animation: bounce .8s;
+  animation-iteration-count: infinite;
 }
 @keyframes bounce {
   25%{
