@@ -1,0 +1,323 @@
+@import "./bg_reset.css";
+
+html{
+  font-family: 'Microsoft JhengHei';
+  box-sizing: border-box;
+  background-color: #2f375b;
+}
+
+.wrap{
+  max-width: 1920px;
+  margin: 0 auto;
+  min-width: 1300px;
+}
+a, select{
+  cursor: pointer;
+}
+
+
+/* header */
+header{
+  /* border: 1px solid red; */
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+header div.logo_bread{
+	display: flex;
+	align-items: center;
+	/* border: 1px solid green; */
+}
+header div.logo_bread > a{
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #fff;
+}
+header .logo_bread > a > img{
+  width: 6rem;
+  height: 6rem;
+  animation-name: rotating;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+}
+@keyframes rotating {
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform:rotateY(360deg);
+  }
+}
+header div.logo_bread nav{
+	margin-left: 2rem;
+}
+header ol.breadcrumb span{
+	padding: 0 .5rem;
+}
+header ol.breadcrumb a{
+  /* text-decoration: none; */
+  color: #fff;
+}
+
+header ol.breadcrumb .current{
+  color: #fec240;
+}
+header ol.breadcrumb{
+	display: flex;
+}
+header div.burger{
+	width: 50px;
+	height: 50px;
+	background-color: #000;
+}
+
+/* aside */
+div.content{
+	margin: 0 auto;
+	width: 90%;
+	/* border: 1px solid blue; */
+	display: flex;
+  justify-content: space-around;
+}
+aside{
+	width: 20%;
+  background-color: #fec240;
+  color: #2f375b;
+}
+div.content input, div.content select, div.content button, div.content textarea{
+  font-family: 'Microsoft JhengHei';
+  border: 0;
+	display: block;
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	width: 90%;
+  outline: none;
+}
+div.content textarea{
+  resize: none;
+  font-size: 1rem;
+}
+div.content button{
+	width: 30%;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  left: 60%;
+  background-color: #2f375b;
+  color: #fec240;
+  cursor: pointer;
+}
+div.content button:hover{
+  color: #fff;
+}
+aside p{
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	font-weight: bold;
+}
+div.content aside div.where, div.content aside div.who{
+		/* border: 1px solid orange; */
+		padding: 1em 5%;
+}
+
+
+
+/* main */
+main{
+  color: #fff;
+	width: 80%;
+	/* border: 1px solid gray; */
+  padding: 0 1rem;
+}
+section.photo_map{
+	display: flex;
+	/* border: 1px solid #000; */
+	justify-content: space-between;
+}
+main h1{
+	font-size: 3rem;
+	font-weight: bold;
+  margin-bottom: .5rem;
+  /* border: 1px solid green; */
+}
+section.photo_map div.photo{
+  width: 45%;
+  /* height: 400px; */
+}
+section.photo_map div.photo img{
+  width: 100%;
+}
+section.intro_comment{
+	display: flex;
+	justify-content: space-between;
+  /* border: 1px solid red; */
+}
+section.intro, section.comment{
+  padding: .5rem 0 0 0;
+}
+section.intro{
+  /* border: 1px solid pink; */
+  width: 45%;
+  font-weight: bold;
+}
+section.intro p{
+  font-size: 1.3rem;
+	margin-bottom: 1rem;
+}
+section.intro .store_fb a{
+  color: #fff;
+  cursor: pointer;
+}
+section.intro .store_fb a:hover{
+  color: #fec240;
+}
+section.intro p::before{
+  content:'';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: .5rem;
+}
+section.intro p.store_address::before{
+  background-image: url('../images/searching/pin.png');
+}
+section.intro p.store_time::before{
+  background-image: url('../images/searching/time.png');
+}
+section.intro p.store_phone::before{
+  background-image: url('../images/searching/contact.png');
+}
+section.intro p.store_fb::before{
+  background-image: url('../images/searching/facebook.png');
+}
+section.intro p.store_cost::before{
+  background-image: url('../images/searching/money.png');
+}
+section.intro p.store_service::before{
+  background-image: url('../images/searching/hello.png');
+}
+section.intro p.store_game::before{
+  background-image: url('../images/searching/board-game.png');
+}
+
+section.comment{
+	/* border: 1px solid yellow; */
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+section.comment p.store_comment::before{
+  content:'';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: .5rem;
+  background-image: url('../images/searching/comment.png');
+}
+
+section.comment div.comment_area{
+  /* border: 1px solid red; */
+  overflow-y: scroll;
+  height: 18rem;
+}
+
+div.comment_area::-webkit-scrollbar {
+  width: .5rem;
+}
+/* Track */
+div.comment_area::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+/* Handle */
+div.comment_area::-webkit-scrollbar-thumb {
+  background: #fec240;
+  border-radius: 10px;
+}
+/* Handle on hover */
+div.comment_area::-webkit-scrollbar-thumb:hover {
+  background: #de4b43;
+}
+
+section.comment div.comment_area div.user{
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  padding: .5rem;
+}
+
+div.user span{
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align:middle;
+  font-weight: bold;
+  /* border: 1px solid green; */
+}
+div.user span:before{
+  content:'';
+  display: inline-block;
+  vertical-align:middle;
+  width: 2rem;
+  height: 2rem;
+  margin-right: .5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+div.user span:after{
+  content: '';
+  /* border: 1px solid red; */
+  display: inline-block;
+  vertical-align:middle;
+  height: 1rem;
+  margin-left: 1rem;
+  background-size: contain;
+}
+div.comment1 span:before{
+  background-image: url('../images/searching/chan.png');
+}
+div.comment1 span:after{
+  background-image: url('../images/searching/heart.png');
+  width: 4.5rem;
+}
+div.comment2 span:before{
+  background-image: url('../images/searching/navbar.png');
+}
+div.comment2 span:after{
+  background-image: url('../images/searching/heart.png');
+  width: 5rem;
+}
+div.comment3 span:before{
+  background-image: url('../images/searching/dennis.png');
+}
+div.comment3 span:after{
+  background-image: url('../images/searching/heart.png');
+  width: 1rem;
+}
+div.comment4 span:before{
+  background-image: url('../images/searching/pun.png');
+}
+div.comment4 span:after{
+  background-image: url('../images/searching/heart.png');
+  width: 3.5rem;
+}
+div.comment5 span:before{
+  background-image: url('../images/searching/sanchong.png');
+}
+div.comment5 span:after{
+  background-image: url('../images/searching/heart.png');
+  width: 5rem;
+}
+div.user p{
+  margin-top: .5rem;
+}

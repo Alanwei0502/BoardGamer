@@ -1,0 +1,58 @@
+@import "./bg_reset.css";
+@import "./header.css";
+
+html{
+  font-family: 'Microsoft JhengHei';
+  background-color: #2f375b;
+  box-sizing: border-box;
+}
+.wrap{
+  max-width: 1920px;
+  margin: 0 auto;
+  min-width: 1300px;
+}
+
+
+/* -----header裡面的nav.filter-----  */
+nav.filter{
+  background-color: #de4b43;
+  border-radius: 1.5rem;
+}
+nav.filter ul{
+  display: flex;
+  justify-content: space-around;
+}
+nav.filter li{
+  margin: 1rem;
+}
+nav.filter a{
+  display: block;
+  background-color: #fec240;
+  text-decoration: none;
+  color: #2f375b;
+  font-size: 3rem;
+  padding: .5rem  2rem;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  transition: color .3s, background-color .3s;
+}
+nav.filter a:hover{
+  background-color: #2f375b;
+  color: #fec240;
+}
+
+nav.filter a.cross{
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #de4b43;
+  height: 4rem;
+  width: 4rem;
+}
+nav.filter a.cross img{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* main main main main main */
