@@ -1,4 +1,7 @@
 @import "./bg_reset.css";
+@import "./signin.css";
+@import "./footer.css";
+@import "./burger.css";
 
 html{
   background-color: #2f375b;
@@ -7,29 +10,38 @@ html{
 }
 
 .wrap{
-  width: 100%;
   margin: 0 auto;
-  min-width: 1300px;
-  /* border: 1px solid red; */
+  width: 100%;
+  max-width: 1920px;
 }
 
-/* header header header header */
+/* header */
 header{
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
-header ul{
+header ul.smallMenu{
   display: flex;
   vertical-align: middle;
 }
-header ul li a{
+header ul.smallMenu li a{
   text-decoration: none;
   color: #fff;
   display: inline-block;
   font-weight: bold;
   font-size: 2rem;
 }
-a.account, a.about{
+a.mini_logo{
+  display: block;
+  margin-left: 1rem;
+  display: none;
+}
+a.mini_logo img{
+  height: 5rem;
+  display: none;
+}
+a.member, a.about{
   padding: 1rem;
 }
 a.social img{
@@ -38,23 +50,23 @@ a.social img{
   padding: 1rem;
 }
 header a:hover{
-  animation: bounce .8s infinite;
+  animation: bounce .6s infinite;
 }
 @keyframes bounce {
-  25%{
-    transform:translateY(-10%);
-  }
-  50%{
+  0%{
     transform:translateY(0%);
   }
-  75%{
-    transform:translateY(-5%);
+  50%{
+    transform:translateY(-10%);
   }
   100%{
     transform:translateY(0%);
   }
 }
 
+
+
+/* logo */
 div.logo{
   width: 25%;
   left: 0;
@@ -86,7 +98,7 @@ div.logo .introduction{
   left: 0;
   height: 15rem;
   width: 2px;
-  animation: loading linear 2s infinite;
+  animation: loading linear 3s infinite;
 }
 @keyframes loading{
   0%{
@@ -99,19 +111,20 @@ div.logo .introduction{
 
 div.logo h1{
   position: relative;
-  top: -8%;
+  top: -5%;
   text-align: center;
 }
 div.logo h1 a{
   display: block;
   border-radius: 50%;
-  animation: rotating 3s infinite linear;
+  background-color: #fff;
 }
 div.logo h1 a img{
   width: 100%;
+  animation: rotating 5s infinite linear;
 }
-div.logo h1 a:active{
-  animation: rotating 1s;
+div.logo h1 a img:hover{
+  animation-play-state: paused;
 }
 @keyframes rotating {
   0%{
@@ -122,22 +135,26 @@ div.logo h1 a:active{
   }
 }
 
-main{
+/* three main function */
+main, main nav, .three_mains{
   display: flex;
+}
+main{
   margin-bottom: 4rem;
+  width: 99%;
 }
 main nav{
-  display: flex;
   width: 75%;
+  border-radius: 2rem;
+  overflow: hidden;
 }
-main nav ul{
-  display: flex;
+.three_mains{
   width: 100%;
 }
-main nav ul li{
+.three_mains li{
   width: 33.33333%;
 }
-main nav li a{
+.three_mains a{
   background-repeat: no-repeat;
   display: inline-block;
   background-size: cover;
@@ -146,13 +163,13 @@ main nav li a{
   width: 100%;
   position: relative;
 }
-main nav li a.finding_store{
+.three_mains a.finding_store{
   background-image: url('../images/home/store.jpg');
 }
-main nav li a.playing_game{
+.three_mains a.playing_game{
   background-image: url('../images/home/playing_board_games.jpg');
 }
-main nav li a.game_tutorial{
+.three_mains a.game_tutorial{
   background-image: url('../images/home/catan.jpg');
 }
 .three_mains h2{
@@ -164,8 +181,11 @@ main nav li a.game_tutorial{
   font-weight: bold;
   color: #fff;
   white-space: nowrap;
-  opacity: 0;
+  opacity: .6;
   transition: opacity .5s;
+}
+.three_mains a:hover > h2{
+  opacity: 1;
 }
 .three_mains div.filter{
   position: absolute;
@@ -184,9 +204,6 @@ main nav li a.game_tutorial{
   height: 20rem;
   transition: .5s;
 }
-.three_mains a:hover > h2{
-  opacity: 1;
-}
 .three_mains div.yellow_filter{
   background-color: #fec240;
 }
@@ -197,61 +214,50 @@ main nav li a.game_tutorial{
   background-color: #de4b43;
 }
 
-
-/* 最新消息 */
+/* news */
 h3{
   color: #fec240;
-  font-size: 2em;
-  margin: 1em 2em;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10rem 2rem 2rem 2rem;
 }
-h3:before{
-  content:'';
+.news h3::before{
+  content: '';
+  background-image: url('../images/home/newspaper.png');
   display: inline-block;
-  height: 30px;
-  width: 30px;
+  background-size: cover;
+  background-position: center;
+  vertical-align: bottom;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-right: 1rem;
 }
-.news h3:before{
-  background-image: url('../images/home/title_icon.png');
-}
+
 .news div.slider{
   overflow: hidden;
   background-color: #000;
-  width: 100%;
   padding: 2em 0;
-  position: relative;
   white-space: nowrap;
 }
 .slider-row{
-  height: 250px;
+  height: 25rem;
   position: relative;
 }
 .news1, .news2, .news3, .news4, .news5{
-  animation: slide 15s linear infinite;
-  position: absolute;
-}
-a.news1{
-  animation: slide 15s linear infinite;
+  animation: slide 30s linear infinite;
   position: absolute;
 }
 a.news2{
-  animation: slide 15s linear infinite;
-  position: absolute;
-  animation-delay: -3s;
-}
-a.news3{
-  animation: slide 15s linear infinite;
-  position: absolute;
   animation-delay: -6s;
 }
+a.news3{
+  animation-delay: -12s;
+}
 a.news4{
-  animation: slide 15s linear infinite;
-  position: absolute;
-  animation-delay: -9s;
+  animation-delay: -18s;
 }
 a.news5{
-
-  animation-delay: -12s;
+  animation-delay: -24s;
 }
 @keyframes slide {
   0%{
@@ -259,18 +265,19 @@ a.news5{
     visibility: visible;
   }
   100%{
-    left: -384px;
+    left: -100%;
     visibility: visible;
   }
+}
+.news .slider:hover > .slider-row a{
+  animation-play-state: paused;
 }
 div.slider-row a{
   display: inline-block;
   visibility: hidden;
   background-repeat: no-repeat;
-  /* border: 1px solid lightblue; */
-  width: 20%;
-  height: 250px;
-  margin: 0 1em;
+  width: 35%;
+  height: 25rem;
   background-position: center;
   background-size: cover;
 }
@@ -294,59 +301,123 @@ div.slider-row a.news5{
   background-position: 0 75%;
 }
 
-/* 新品上市 */
-.product h3:before{
-  background-image: url('../images/home/title_icon.png');
+/* new products */
+.product h3::before{
+  content: '';
+  background-image: url('../images/home/chess.png');
+  display: inline-block;
+  background-size: cover;
   background-position: center;
+  vertical-align: bottom;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
 }
-
+.carousel_outside{
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
 .carousel_product{
-  margin: 5em 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
 }
-.return_button{
-  display: flex;
-  justify-content: flex-end;
-  /* border: 1px solid green; */
-}
-.return_button img, .next_button img{
-  height: 50px;
-}
-.next_button{
-  display: flex;
-  /* border: 1px solid green; */
+.carousel_product .items{
+  margin: 0 2rem;
+  padding: 1rem;
 }
 .carousel_product .items a{
   display: block;
   text-decoration: none;
   color: #fff;
   transition: transform .2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .carousel_product .items a:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+.carousel_product .items img{
+  width: 60%;
 }
 .carousel_product .items a p{
   margin-top: 1rem;
   line-height: 1.5rem;
+  font-size: 1.4rem;
+  width: 60%;
 }
-.carousel_product .items{
-  /* border: 1px solid lightblue; */
-  width: 200px;
+.lSAction > a.lSPrev, .lSAction > a.lSNext{
+  opacity: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 2.5rem;
+  width: 2.5rem;
 }
-.carousel_product .items img{
-  width: 100%;
-  /* border: 1px solid gray; */
+.lSAction > a.lSPrev{
+  background-image: url('../images/home/arrow1.png');
+}
+.lSAction > a.lSNext{
+  background-image: url('../images/home/arrow2.png');
+}
+
+/* newsList 768px */
+div.newsList768{
+  display: none;
+}
+
+div.newsList768 li{
+  list-style: circle;
+}
+div.newsList768 a{
+  text-decoration: none;
+  color: #2f375b;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  padding: 1rem 0;
+}
+div.newsList768 li:hover{
+  list-style: disc;
+}
+div.newsList768 li:hover a{
+  text-decoration: underline;
 }
 
 /* 電子報訂閱 */
+.subscribe_go_top .subscribe h3::before{
+  content: '';
+  background-image: url('../images/home/subscribe.png');
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  vertical-align: bottom;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+}
 .subscribe_go_top{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 10rem;
+  justify-content: space-around;
+}
+.subscribe, .join_us{
+  background-color: #fec240;
+  border-radius: 2rem;
+  margin-top: 5rem;
+  padding: 2rem;
+  width: 40%;
+}
+.subscribe_go_top h3{
+  color: #2f375b;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 2rem 0;
+}
+.subscribe{
+  margin-right: 2rem;
 }
 .subscribe h3:before{
   background-image: url('../images/home/title_icon.png');
@@ -354,136 +425,347 @@ div.slider-row a.news5{
 }
 .subscribe input{
   font-size: 1.5em;
-  width: 17em;
+  width: 95%;
   padding: .5em;
   outline: none;
   border: 0;
   border-radius: 2em;
+  margin-bottom: 1rem;
   display: block;
 }
-.subscribe form{
-  margin-left: 4em;
-  margin-top: 4em;
-  padding-left: 2em;
-}
 .click{
-  margin-top: 1em;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
 }
 .click > div{
-  color: #fff;
+  color: #2f375b;
   vertical-align: middle;
   font-size: 1.5em;
+  font-weight: bold;
 }
 .click img{
   width: 2em;
+  margin-right: 1rem;
 }
 .click button{
   font-family: 'Microsoft JhengHei';
   font-weight: bold;
   outline: none;
   border: 0;
-  background-color: #fec240;
-  color: #2f375b;
+  background-color: #de4b43;
+  color: #fff;
   font-size: 2em;
   padding: 5px 25px;
   border-radius: 2em;
   cursor: pointer;
 }
 .click button:hover{
-   color: #fff;
+  color: #2f375b;
+  background-color: #fec240;
 }
 
+/* join us */
 
-
-/* 揪團去 */
-.go_top{
-  margin-top: 5em;
+.join_us h3::before{
+  content: '';
+  background-image: url('../images/home/friends.png');
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  vertical-align: bottom;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
 }
-.go_top a{
-  text-decoration: none;
-  display: block;
-  color: #fec240;
-  font-size: 4em;
+.join_us p{
+  color: #2f375b;
   font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
 }
-.go_top a img{
-  width: 1em;
-  height: 1em;
-}
-.go_top:hover img{
-  animation: bounce .8s;
-  animation-iteration-count: infinite;
-}
-@keyframes bounce {
-  25%{
-    transform:translateY(-10%);
-  }
-  50%{
-    transform:translateY(0%);
-  }
-  75%{
-    transform:translateY(-5%);
-  }
-  100%{
-    transform:translateY(0%);
-  }
-}
-.go_top a{
-  transition: 1s;
-}
-/* footer */
-footer{
+.join_us div{
   display: flex;
-  justify-content: space-between;
-  padding: 0 2em;
-  margin-top: 5em;
-  background-color: #000;
-  color: #fff;
-  align-items: center;
+  justify-content: flex-end;
 }
-footer ul {
+.join_us button{
+  font-family: 'Microsoft JhengHei';
+  font-weight: bold;
+  outline: none;
+  border: 0;
+  background-color: #de4b43;
+  color: #fff;
+  font-size: 2em;
+  padding: 5px 25px;
+  border-radius: 2em;
+  cursor: pointer;
+}
+.join_us button:hover{
+  color: #2f375b;
+  background-color: #fec240;
+}
+
+/* back_to_top */
+.back_to_top_outside{
   display: flex;
+  justify-content: flex-end;
 }
-footer a{
-  text-decoration: none;
-  color: #fff;
+.back_to_top{
+  background-image: url('../images/home/top.png');
   display: inline-block;
-  padding: 2em;
+  background-size: cover;
+  background-position: center;
+  width: 5rem;
+  height: 5rem;
+  margin: 3rem 1rem 3rem 0;
+  opacity: .5;
 }
-footer a:hover{
-  color: #fec240;
-}
-footer span{
-  display: inline-block;
-  margin-right: 2em;
+.back_to_top:hover{
+  opacity: 1;
+  cursor: pointer;
 }
 
 
 
-
-/* media */
-/* @media (max-width: 1371px) {
-  div.logo h1 a{
-    width: 15em;
-    height: 15em;
-  }
-
-}
-@media (max-width: 1614px){
+/* RWD */
+@media (max-width:1700px) {
   .three_mains a:hover div.filter{
-    width: 20em;
-    height: 20em;
-  }
-}
-
-@media (max-width: 1298px){
-  .three_mains a:hover div.filter{
-    width: 15em;
-    height: 15em;
+    width: 15rem;
+    height: 15rem;
   }
   .three_mains h2{
-    font-size: 3em;
-  } */
+    font-size: 3rem;
+  }
+  .slider-row{
+    height: 20rem;
+  }
+  div.slider-row a{
+    height: 20rem;
+  }
+}
+
+@media (max-width:1630px) {
+  div.logo .introduction{
+    font-size: 1.4rem;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width:1250px) {
+  main .three_mains{
+    display: flex;
+    flex-direction: column;
+  }
+  .three_mains li{
+    height: 33.33333%;
+    width: 100%;
+  }
+  .three_mains a:hover div.filter{
+    width: 25rem;
+    height: 10rem;
+  }
+  div.logo .introduction{
+    font-size: 1.2rem;
+    line-height: 3rem;
+  }
+  .three_mains h2{
+    font-size: 4rem;
+  }
+  .slider-row{
+    height: 15rem;
+  }
+  div.slider-row a{
+    height: 15rem;
+  }
+  .news h3{
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width:1100px){
+  .back_to_top{
+    margin-left: 80%;
+  }
+}
+
+@media (max-width:1050px) {
+  div.logo{
+    display: none;
+  }
+  main{
+    margin-bottom: 0;
+    width: 100%;
+    justify-content: center;
+  }
+  main nav{
+    width: 95%;
+    height: 80vh;
+  }
+  header{
+    justify-content: space-between;
+    height: 15vh;
+  }
+  a.mini_logo, a.mini_logo img{
+    display: block;
+  }
+  .three_mains h2{
+    opacity: 1;
+  }
+}
+
+@media (max-width:1000px){
+  .subscribe_go_top{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 0;
+  }
+  .subscribe{
+    margin-right: 0rem;
+  }
+  .subscribe, .join_us{
+    width: 80%;
+  }
+  .subscribe form{
+    margin-left: 0;
+  }
+  .subscribe input{
+    width: 90%;
+  }
+  .click button, .join_us button{
+    font-size: 1.5rem;
+  }
+  .click button:hover{
+    background-color: #2f375b;
+    color: #fec240;
+  }
+  .join_us button:hover{
+    background-color: #2f375b;
+    color: #fec240;
+  }
+  .click img{
+    display: block;
+  }
+}
+
+@media (max-width:900px) {
+  div.slider-row a{
+    width: 50%;
+  }
+  @keyframes slide {
+    0%{
+      left: 100%;
+      visibility: visible;
+    }
+    100%{
+      left: -200%;
+      visibility: visible;
+    }
+  }
+  .carousel_outside .carousel_product .items p{
+    display: none;
+  }
+}
+@media (max-width:768px) {
+  /* 最新消息 */
+  .news div.slider{
+    display: none;
+  }
+  section.news h3{
+    color: #2f375b;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  section.news{
+    background-color: #fec240;
+    width: 80%;
+    margin: auto;
+    border-radius: 2rem;
+    margin-top: 5rem;
+    overflow: hidden;
+    padding: 2rem;
+  }
+  div.newsList768{
+    display: block;
+  }
+  div.newsList768 ul li a{
+    text-decoration: underline;
+  }
+  /* 新品上市 */
+  section.product h3{
+    color: #2f375b;
+    margin: 0;
+    margin-bottom: 0rem;
+  }
+  section.product{
+    background-color: #fec240;
+    width: 80%;
+    margin: auto;
+    border-radius: 2rem;
+    margin-top: 5rem;
+    overflow: hidden;
+    padding: 2rem;
+  }
+  .lSAction > a.lSPrev{
+    background-image: url('../images/home/pre.png');
+  }
+  .lSAction > a.lSNext{
+    background-image: url('../images/home/next.png');
+  }
+  .carousel_outside{
+    width: 100%;
+  }
+  .carousel_product .items img{
+    width: 60%;
+  }
+
+}
+@media (max-width:650px) {
+  header nav{
+    display: none;
+  }
+  .burger_icon{
+    display: block;
+  }
+
+}
+
+@media (max-width:550px) {
+  .news h3, .product h3, .subscribe h3, .join_us h3{
+    margin-left: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .click div, .click img{
+    display: none;
+  }
+  div.back_to_top{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (max-width:500px) {
+  html{
+    font-size: 12px;
+  }
+  .news h3, .product h3, .subscribe h3, .join_us h3{
+    font-size: 3rem;
+  }
+  .newsList768 ul li a{
+    font-size: 2rem;
+  }
+  .subscribe button{
+    font-size: 2rem;
+  }
+  .join_us p{
+    font-size: 2rem;
+  }
+  .join_us button{
+    font-size: 2rem;
+  }
+  div.back_to_top{
+    width: 4rem;
+    height: 4rem;
+  }
+}

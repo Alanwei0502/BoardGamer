@@ -1,40 +1,60 @@
 @import "./bg_reset.css";
 @import "./header.css";
+@import "./footer.css";
 
 html{
   font-family: 'Microsoft JhengHei';
   background-color: #2f375b;
   box-sizing: border-box;
+  font-size: 16px;
 }
 .wrap{
   width: 100%;
   margin: 0 auto;
-  min-width: 1300px;
 }
-
 
 /* -----header裡面的nav.filter-----  */
 nav.filter{
   background-color: #de4b43;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
+  max-width: 44rem;
+  margin: 0 auto;
+  position: sticky;
+  top: 3%;
+  z-index: 5;
+  /* border: 2px solid green; */
+  padding: 0 2rem;
+}
+span.leftArrow, span.rightArrow{
+  display: none;
 }
 nav.filter ul{
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  /* border: 2px solid lightblue; */
+
 }
 nav.filter li{
   margin: 1rem;
+  /* border: 2px solid blue; */
 }
 nav.filter a{
   display: block;
+  white-space: nowrap;
   background-color: #fec240;
   text-decoration: none;
   color: #2f375b;
   font-size: 2rem;
-  padding: .5rem  2rem;
+  padding: .5rem  1rem;
   border-radius: 1.5rem;
   font-weight: bold;
   transition: color .3s, background-color .3s;
+  /* border: 2px solid black; */
+}
+nav.filter a.here{
+  background-color: #2f375b;
+  color: #fec240;
 }
 nav.filter a:hover{
   background-color: #2f375b;
@@ -49,10 +69,312 @@ nav.filter a.cross{
   height: 3rem;
   width: 3rem;
 }
-nav.filter a.cross img{
-  width: 100%;
-  height: 100%;
+nav.filter a.cross:hover{
+  background-color: #2f375b;
+}
+nav.filter .create{
+  display: flex;
+  align-items: center;
 }
 
-
 /* main main main main main */
+main{
+  margin: 0 auto;
+  width: 100%;
+}
+.waterfall{
+  margin: 0 auto;
+  width: 90%;
+  column-count: 3;
+  padding-top: 5rem;
+  padding-left:  .5rem;
+}
+.waterfall > div{
+  break-inside: avoid;
+}
+
+.waterfall a{
+  display: block;
+  border-radius: 3rem;
+  text-decoration: none;
+  margin: 2rem 1rem;
+  width: 90%;
+  outline: none;
+  box-shadow: 2px .8rem .8rem rgba(0,0,0,0.5);
+  transition: box-shadow .3s;
+}
+.waterfall a:hover{
+  box-shadow: 0px 0px 2rem rgba(222, 75, 67,1);
+
+}
+.waterfall a div:nth-child(1){
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 3rem 3rem 0 0;
+  height: 25rem;
+}
+.lSAction > a.lSPrev, .lSAction > a.lSNext{
+  background-image: url('../images/slider/controls.png');
+  opacity: 1;
+}
+.party1{
+  background-image: url('../images/playing/party1.jpg');
+}
+.party2{
+  background-image: url('../images/playing/party2.jpg');
+}
+.party3{
+  background-image: url('../images/playing/party3.jpg');
+}
+.party4{
+  background-image: url('../images/playing/party4.jpg');
+}
+.party5{
+  background-image: url('../images/playing/party5.jpg');
+}
+.party6{
+  background-image: url('../images/playing/party6.jpg');
+}
+.party7{
+  background-image: url('../images/playing/party7.jpg');
+}
+.party8{
+  background-image: url('../images/playing/party8.jpg');
+}
+.party9{
+  background-image: url('../images/playing/party9.jpg');
+}
+.party10{
+
+  background-image: url('../images/playing/party10.jpg');
+}
+.party11{
+  background-image: url('../images/playing/party11.png');
+}
+.party12{
+  background-image: url('../images/playing/party12.jpg');
+}
+.party13{
+  background-image: url('../images/playing/party13.jpg');
+}
+.party14{
+  background-image: url('../images/playing/party14.jpg');
+}
+.party15{
+  background-image: url('../images/playing/party15.jpg');
+}
+.party16{
+  background-image: url('../images/playing/party16.jpg');
+}
+.waterfall a .info{
+  border-radius: 0 0 3rem 3rem;
+  background-color: #fff;
+  padding: 1.5rem;
+}
+.info h2{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2f375b;
+}
+.info h2 + p{
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: #2f375b;
+  margin: 2rem 0;
+}
+.info h2 + p ~ p{
+  font-size: 1.5rem;
+  color: #2f375b;
+  margin-top: 1rem;
+}
+.createNew{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .3s;
+}
+.createNew h2{
+  color: #2f375b;
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.createNew h2::before{
+  content: '';
+  background-image: url('../images/playing/plus(1).png');
+  display: block;
+  background-size: contain;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+.waterfall a.create{
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.waterfall a.create:hover .createNew{
+  background-color: #fec240;
+}
+@media (max-width: 1300px) {
+  .waterfall{
+    column-count: 2;
+  }
+
+}
+@media (max-width: 950px) {
+  .waterfall{
+    margin: 0 auto;
+    width: 99%;
+    column-count: auto;
+    padding-top: 5rem;
+    padding-left:  .5rem;
+  }
+  .waterfall > div{
+    break-inside: auto;
+  }
+  /* -----header裡面的nav.filter-----  */
+  nav.filter{
+    width: 12rem;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    margin-left: 1rem;
+    top: 2%;
+    border-radius: 1.125rem;
+    /* border: 2px solid green; */
+  }
+  /* li:first-child ~ li{
+    display: none;
+  } */
+  span.leftArrow, span.rightArrow{
+    display: inline-block;
+    position: absolute;
+    height: 1.125rem;
+    width: 1.125rem;
+    background-image: url('../images/playing/play.png');
+    background-size: cover;
+    cursor: pointer;
+  }
+  span.leftArrow{
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%) rotate(180deg);
+    z-index: 10;
+  }
+  span.rightArrow{
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  nav.filter ul{
+    margin: .375rem 0;
+    padding: .375rem 0;
+    justify-content: flex-start;
+    position: relative;
+    /* border: 2px solid orange; */
+
+  }
+  nav.filter li{
+    margin: 0;
+    padding: 0 1.875rem;
+    width: 100%;
+    border-radius: 1.125rem;
+    /* border: 2px solid blue; */
+    left: 0;
+    position: relative;
+  }
+  nav.filter li.createFilter{
+    padding: 0 1.575rem;
+  }
+  nav.filter a{
+    font-size: 2.25rem;
+    padding: .375rem 1.9rem;
+    text-align: center;
+  }
+  nav.filter .create{
+    font-size: 2.25rem;
+    padding: .375rem 0;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  html{
+    font-size: 12px;
+  }
+
+  .main_menu a{
+    font-size: 3rem;
+  }
+
+
+  /* -----header裡面的nav.filter-----  */
+  nav.filter{
+    width: 16rem;
+    padding: 0 2rem;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    /* border: 2px solid green; */
+  }
+
+  /* li:first-child ~ li{
+    display: none;
+  } */
+  span.leftArrow, span.rightArrow{
+    display: inline-block;
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url('../images/playing/play.png');
+    background-size: cover;
+    cursor: pointer;
+  }
+  span.leftArrow{
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%) rotate(180deg);
+    z-index: 10;
+  }
+  span.rightArrow{
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  nav.filter ul{
+    margin: .5rem 0;
+    padding: .5rem 0;
+    justify-content: flex-start;
+    position: relative;
+    /* border: 2px solid orange; */
+
+  }
+  nav.filter li{
+    margin: 0;
+    padding: 0 2.5rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    /* border: 2px solid blue; */
+    left: 0;
+    position: relative;
+  }
+  nav.filter li.createFilter{
+    padding: 0 2.1rem;
+  }
+  nav.filter a{
+    font-size: 3rem;
+    padding: .5rem 2.5rem;
+    text-align: center;
+  }
+  nav.filter .create{
+    font-size: 3rem;
+    padding: .5rem 0;
+    margin: 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,814 @@
+@import "./bg_reset.css";
+@import "./header.css";
+@import "./footer.css";
+
+html{
+  font-family: 'Microsoft JhengHei';
+  box-sizing: border-box;
+  background-color: #2f375b;
+}
+
+.wrap{
+  width: 100%;
+  margin: 0 auto;
+}
+a, select{
+  cursor: pointer;
+}
+
+/* main main main main main */
+main{
+  /* border: 1px solid red; */
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 23vw 23vw 23vw 23vw;
+  grid-template-rows: repeat(10, 23vw);
+  grid-template-areas:
+  "banner banner banner banner"
+  "banner banner banner banner"
+  "concept concept logo pic1"
+  "concept concept pic2 quote1"
+  "pic3 quote4 service service"
+  "quote2 pic4 service service"
+  "contact contact members pic5"
+  "contact contact pic6 groups"
+  "pic7 pic7 cooperate pic8"
+  "quote3 pic9 chat chat";
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+main > div{
+  border-radius: 2rem;
+  color: #2f375b;
+}
+
+/* banner */
+.banner{
+  grid-area: banner;
+  background-image: url('../images/about/redGame.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner .black{
+  background-color: rgba(0,0,0,.7);
+  width: 90%;
+  height: 50%;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner span{
+  display: block;
+  font-size: 5rem;
+  font-weight: bold;
+  width: 45rem;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(9), caret 1s steps(1) infinite;
+  border-right: 1px solid #fff;
+}
+@keyframes typing {
+  from{
+    width: 0;
+  }
+}
+@keyframes caret {
+  50%{
+    border-color: transparent;
+  }
+}
+/* 理念內文 */
+.concept{
+  grid-area: concept;
+  background-color: #fec240;
+  padding: 2rem;
+}
+.concept h1{
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.concept h1::before{
+  content: '';
+  display: inline-block;
+  background-image: url('../images/about/idea.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1rem;
+}
+.concept p{
+  font-size: 2rem;
+  line-height: 3rem;
+  /* font-weight: bold; */
+}
+
+/* 我的logo圖片 */
+.logo{
+  grid-area: logo;
+  background-color: rgba(0,0,0,.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img{
+  width: 80%;
+}
+
+/* GAME NIGHT的圖片 */
+.pic1{
+  grid-area: pic1;
+  perspective: 800px;
+}
+.card1{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  animation: rotate1 20s linear forwards;
+  animation-iteration-count: infinite;
+}
+.card1_front, .card1_back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+}
+.card1_front{
+  background-image: url('../images/about/gameNight.jpg');
+}
+.card1_back{
+  transform: rotateY(180deg);
+  background-image: url('../images/about/gameslight.jpg');
+}
+
+@keyframes rotate1 {
+  20%{
+    transform: rotateY(0deg);
+  }
+  25%{
+    transform: rotateY(180deg);
+  }
+  70%{
+    transform: rotateY(180deg);
+  }
+  75%{
+    transform: rotateY(0deg);
+  }
+}
+/* 很多meeple的圖片 */
+.pic2{
+  grid-area: pic2;
+  background-image: url('../images/about/many-meeples.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 玩耍，是人類的本能。 */
+.quote1{
+  grid-area: quote1;
+  background-color: rgba(0,0,0,.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.quote1 span{
+  color: #fec240;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+/* 四個meeple的圖片 */
+.pic3{
+  grid-area: pic3;
+  perspective: 800px;
+}
+.card3{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  animation: rotate3 25s linear forwards;
+  animation-iteration-count: infinite;
+}
+.card3_front, .card3_back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 2rem;
+}
+.card3_front{
+  background-image: url('../images/about/fourMeeple.jpg');
+}
+.card3_back{
+  transform: rotateY(180deg);
+  background-image: url('../images/about/poster.jpg');
+}
+
+@keyframes rotate3 {
+  0%{
+    transform: rotateY(0deg);
+  }
+  5%{
+    transform: rotateY(-180deg);
+  }
+  50%{
+    transform: rotateY(-180deg);
+  }
+  55%{
+    transform: rotateY(0deg);
+  }
+}
+
+
+
+/* 身邊有個桌遊咖，是最大的幸福。 */
+.quote4{
+  grid-area: quote4;
+  background-color: rgba(0,0,0,.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.quote4 span{
+  color: #fec240;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+/* 服務內文 */
+.service{
+  grid-area: service;
+  background-color: #fec240;
+  padding: 2rem;
+}
+.service h2{
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.service h2::before{
+  content: '';
+  display: inline-block;
+  background-image: url('../images/about/hired.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1rem;
+}
+.service p{
+  font-size: 2rem;
+  line-height: 3rem;
+  /* font-weight: bold; */
+  margin-bottom: 4rem;
+}
+.service .threeCircle{
+  display: flex;
+  justify-content: space-around;
+}
+.service .threeCircle div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service .threeCircle div img{
+  width: 8rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+.service .threeCircle div span{
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* 遊戲是個媒介，拉近靈魂間的距離。 */
+.quote2{
+  grid-area: quote2;
+  background-color: rgba(0,0,0,.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.quote2 span{
+  color: #fec240;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+/* 桌遊地圖板塊的照片 */
+.pic4{
+  grid-area: pic4;
+  background-image: url('../images/about/map.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 意見回饋 */
+.contact{
+  grid-area: contact;
+  background-color: #fec240;
+  padding: 2rem;
+}
+.contact h2{
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.contact h2::before{
+  content: '';
+  display: inline-block;
+  background-image: url('../images/about/contact.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1rem;
+}
+.contact p, .contact label, .contact input, .contact textarea{
+  font-size: 2rem;
+  line-height: 3.5rem;
+  /* font-weight: bold; */
+}
+.contact p{
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.contact input, .contact textarea{
+  border-radius: 1rem;
+  outline: none;
+  border: 0;
+  margin-left: 1rem;
+  padding: 0 1rem;
+  width: 60%;
+  flex: 1;
+}
+.contact textarea{
+  resize: none;
+}
+.contact form{
+  margin-bottom: 2rem;
+}
+.contact form::after{
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.contact form > div{
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+.contact form button{
+  float: right;
+  border-radius: 1rem;
+  outline: none;
+  border: 0;
+  background-color: #2f375b;
+  color: #fec240;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+}
+.contact form button:hover{
+  background-color: #fec240;
+  color: #2f375b;
+}
+
+/* 會員人數：1500+ */
+.members{
+  grid-area: members;
+  background-color: rgba(0,0,0,.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.members span{
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 5rem;
+  text-align: center;
+  display: block;
+}
+
+/* 很多人搭肩的圖片 */
+.pic5{
+  grid-area: pic5;
+  background-image: url('../images/about/people.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 一些人玩桌遊的圖片 */
+.pic6{
+  grid-area: pic6;
+  perspective: 800px;
+}
+.card6{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  animation: rotate6 20s linear forwards;
+  animation-iteration-count: infinite;
+}
+.card6_front, .card6_back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 2rem;
+}
+.card6_front{
+  background-image: url('../images/playing/party18.png');
+}
+.card6_back{
+  transform: rotateX(180deg);
+  background-image: url('../images/playing/party17.jpg');
+}
+
+@keyframes rotate6 {
+  0%{
+    transform: rotateX(0deg);
+  }
+  5%{
+    transform: rotateX(180deg);
+  }
+  50%{
+    transform: rotateX(180deg);
+  }
+  55%{
+    transform: rotateX(0deg);
+  }
+}
+
+
+/* 揪團次數:300+ */
+.groups{
+  grid-area: groups;
+  background-color: rgba(0,0,0,.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.groups span{
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 5rem;
+  text-align: center;
+  display: block;
+}
+
+/* 四個meeple打牌圖片 */
+.pic7{
+  grid-area: pic7;
+  background-image: url('../images/about/meeple.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 合作店家:200+ */
+.cooperate{
+  grid-area: cooperate;
+  background-color: rgba(0,0,0,.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.cooperate span{
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 5rem;
+  text-align: center;
+  display: block;
+}
+
+/* GOOD GAMES店的圖片 */
+.pic8{
+  grid-area: pic8;
+  background-image: url('../images/about/goodGame.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 人生只有一次，但桌遊，可以一次又一次。 */
+.quote3{
+  grid-area: quote3;
+  background-color: rgba(0,0,0,.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.quote3 span{
+  color: #fec240;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+/* 兩個仁和卡坦島的圖片 */
+.pic9{
+  grid-area: pic9;
+  background-image: url('../images/about/contactUs.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 歡迎來找我們聊聊天 */
+.chat{
+  grid-area: chat;
+  background-color: #fec240;
+  padding: 2rem;
+}
+.chat h2{
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+.chat h2::before{
+  content: '';
+  display: inline-block;
+  background-image: url('../images/about/hired.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1rem;
+}
+.chat span{
+  display: block;
+  font-size: 2rem;
+  line-height: 4rem;
+  /* font-weight: bold; */
+}
+div.chat span br{
+  display: none;
+}
+
+
+/* 開始RWD囉 */
+@media (max-width: 2560px) {
+  html{
+    font-size: 20px;
+  }
+}
+@media (max-width: 2040px) {
+  html{
+    font-size: 18px;
+  }
+}
+@media (max-width: 1920px) {
+  html{
+    font-size: 16px;
+  }
+}
+@media (max-width: 1600px) and (min-width:1401px) {
+  html{
+    font-size: 14px;
+  }
+  .main_menu a{
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  html{
+    font-size: 16px;
+  }
+  main{
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: repeat(13, 30vw);
+    grid-template-areas:
+    "banner banner banner"
+    "banner banner banner"
+    "concept concept logo"
+    "concept concept quote1"
+    "pic1 pic2 pic3"
+    "quote4 service service"
+    "quote2 service service"
+    "pic4 pic5 pic6"
+    "contact contact members"
+    "contact contact groups"
+    "pic7 pic7 cooperate"
+    "pic8 pic9 pic9"
+    "quote3 chat chat";
+  }
+}
+
+@media (max-width: 1250px) and (min-width: 1080px){
+  html{
+    font-size: 14px;
+  }
+  .main_menu a{
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  html{
+    font-size: 16px;
+  }
+  main{
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: repeat(18, 45vw);
+    grid-template-areas:
+    "banner banner"
+    "banner banner"
+    "concept concept"
+    "concept concept"
+    "logo pic1"
+    "pic2 quote1"
+    "service service"
+    "service service"
+    "pic3 quote4"
+    "quote2 pic4"
+    "contact contact"
+    "contact contact"
+    "pic7 pic7"
+    "members pic5"
+    "pic6 groups"
+    "cooperate pic8"
+    "chat chat"
+    "pic9 quote3";
+  }
+}
+
+@media (max-width: 880px) {
+  .banner span{
+    font-size: 3rem;
+    width: 27rem;
+  }
+}
+@media (max-width: 830px) and (min-width: 720px) {
+  html{
+    font-size: 14px;
+  }
+  .main_menu a{
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+@media (max-width: 720px) {
+  html{
+    font-size: 12px;
+  }
+  .main_menu a{
+    font-size: 3rem;
+  }
+  .card1, .card3, .card6{
+    animation: none;
+  }
+
+}
+@media (max-width:620px) {
+  main{
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: repeat(22, 45vw);
+    grid-template-areas:
+    "banner banner"
+    "banner banner"
+    "concept concept"
+    "concept concept"
+    "concept concept"
+    "logo pic1"
+    "pic2 quote1"
+    "service service"
+    "service service"
+    "service service"
+    "pic3 quote4"
+    "quote2 pic4"
+    "contact contact"
+    "contact contact"
+    "contact contact"
+    "pic7 pic7"
+    "members pic5"
+    "pic6 groups"
+    "cooperate pic8"
+    "chat chat"
+    "chat chat"
+    "pic9 quote3";
+  }
+  div.chat span br{
+    display: block;
+  }
+}
+@media (max-width:550px) {
+  div.concept h1, div.service h2, div.contact h2, div.chat h2{
+    font-size: 3rem;
+  }
+}
+@media (max-width:480px) {
+
+  div.groups span, div.cooperate span, div.members span{
+    font-size: 2.5rem;
+  }
+  main{
+    grid-template-columns: 45vw 45vw;
+    grid-template-rows: repeat(24, 45vw);
+    grid-template-areas:
+    "banner banner"
+    "banner banner"
+    "concept concept"
+    "concept concept"
+    "concept concept"
+    "concept concept"
+    "logo pic1"
+    "quote1 quote1"
+    "service service"
+    "service service"
+    "service service"
+    "service service"
+    "quote4 quote4"
+    "quote2 quote2"
+    "contact contact"
+    "contact contact"
+    "contact contact"
+    "pic7 pic7"
+    "members pic5"
+    "pic6 groups"
+    "cooperate pic8"
+    "chat chat"
+    "chat chat"
+    "quote3 quote3";
+  }
+  div.pic2, div.pic3, div.pic4, div.pic9{
+    display: none;
+  }
+}
+@media (max-width:400px) {
+  .banner span{
+    font-size: 2rem;
+    width: 18rem;
+  }
+  div.concept p, div.service p, div.service .threeCircle span, div.contact p, div.contact label, div.contact input, div.contact textarea, div.contact button, div.chat span{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  div.contact form{
+    margin-bottom: 1rem;
+  }
+  .service .threeCircle div img{
+    width: 4rem;
+  }
+}

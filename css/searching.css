@@ -1,172 +1,151 @@
 @import "./bg_reset.css";
+@import "./header.css";
+@import "./footer.css";
 
 html{
   font-family: 'Microsoft JhengHei';
   box-sizing: border-box;
   background-color: #2f375b;
+  font-size: 16px;
 }
 
 .wrap{
   width: 100%;
   margin: 0 auto;
-  min-width: 1300px;
+  max-width: 1920px;
 }
 a, select{
   cursor: pointer;
 }
 
-
-/* header */
-header{
-  /* border: 1px solid red; */
-  color: #fff;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-header div.logo_bread{
-	display: flex;
-	align-items: center;
-	/* border: 1px solid green; */
-}
-header div.logo_bread > a{
-  border-radius: 50%;
-  display: inline-block;
-  background-color: #fff;
-}
-header .logo_bread > a > img{
-  width: 6rem;
-  height: 6rem;
-  animation-name: rotating;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 3s;
-}
-@keyframes rotating {
-  0%{
-    transform: rotateY(0deg);
-  }
-  100%{
-    transform:rotateY(360deg);
-  }
-}
-header div.logo_bread nav{
-	margin-left: 2rem;
-}
-header ol.breadcrumb span{
-	padding: 0 .5rem;
-}
-header ol.breadcrumb a{
-  /* text-decoration: none; */
-  color: #fff;
-}
-
-header ol.breadcrumb .current{
-  color: #fec240;
-}
-header ol.breadcrumb{
-	display: flex;
-}
-header div.burger{
-	width: 50px;
-	height: 50px;
-	background-color: #000;
-}
-
 /* aside */
 div.content{
-	margin: 0 auto;
-	width: 90%;
-	/* border: 1px solid blue; */
-	display: flex;
+  margin: 0 auto;
+  width: 99%;
+  display: flex;
   justify-content: space-around;
 }
+aside > img{
+  width: 3.5rem;
+  margin: .5rem;
+  float: right;
+  position: relative;
+  display: none;
+  transition: transform .3s;
+}
+
+
+
+aside::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+aside a{
+  font-size: 1.2rem;
+}
 aside{
-	width: 20%;
+  width: 25%;
   background-color: #fec240;
   color: #2f375b;
+  border-radius: 1rem;
+}
+aside #form{
+  width: 100%;
 }
 div.content input, div.content select, div.content button, div.content textarea{
+  box-sizing: border-box;
   font-family: 'Microsoft JhengHei';
   border: 0;
-	display: block;
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
-	width: 90%;
+  display: block;
+  font-size: 2rem;
+  width: 95%;
   outline: none;
+  border-radius: 1rem;
+  padding: .5rem;
+  margin: 0 auto 1rem;
 }
 div.content textarea{
   resize: none;
-  font-size: 1rem;
 }
 div.content button{
-	width: 30%;
-  font-size: 1.5rem;
-  border-radius: 10px;
+  font-size: 2rem;
+  border-radius: 1rem;
   position: relative;
-  left: 60%;
   background-color: #2f375b;
   color: #fec240;
   cursor: pointer;
 }
 div.content button:hover{
   color: #fff;
+  background-color: #de4b43;
 }
 aside p{
-	font-size: 2rem;
-	margin-bottom: 1rem;
-	font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 div.content aside div.where, div.content aside div.who{
-		/* border: 1px solid orange; */
-		padding: 1em 5%;
+  padding: 1rem;
+}
+div.content input[type="checkbox"]{
+  display: inline;
+  width: 5%;
 }
 
+div.content ul li{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
 
 
 /* main */
 main{
   color: #fff;
-	width: 80%;
-	/* border: 1px solid gray; */
+  width: 75%;
   padding: 0 1rem;
 }
 section.photo_map{
-	display: flex;
-	/* border: 1px solid #000; */
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-main h1{
-	font-size: 3rem;
-	font-weight: bold;
-  margin-bottom: .5rem;
-  /* border: 1px solid green; */
+main h2{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
-section.photo_map div.photo{
+div.lSSlideOuter {
   width: 45%;
-  /* height: 400px; */
+  border-radius: 1rem;
 }
 section.photo_map div.photo img{
   width: 100%;
+  height: 500px;
 }
-section.intro_comment{
-	display: flex;
-	justify-content: space-between;
-  /* border: 1px solid red; */
+.photo_map iframe{
+  border-radius: 1rem;
+}
+.lSAction > a.lSPrev, .lSAction > a.lSNext{
+  background-image: url('../images/slider/controls.png');
+  opacity: 1;
+}
+section.intro_comment1500{
+  display: none;
 }
 section.intro, section.comment{
   padding: .5rem 0 0 0;
 }
 section.intro{
-  /* border: 1px solid pink; */
-  width: 45%;
   font-weight: bold;
+  display: flex;
+}
+section.intro div{
+  flex: 1;
 }
 section.intro p{
-  font-size: 1.3rem;
-	margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
 }
 section.intro .store_fb a{
   color: #fff;
@@ -178,11 +157,11 @@ section.intro .store_fb a:hover{
 section.intro p::before{
   content:'';
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: .5rem;
+  margin-right: 1rem;
 }
 section.intro p.store_address::before{
   background-image: url('../images/searching/pin.png');
@@ -200,23 +179,18 @@ section.intro p.store_cost::before{
   background-image: url('../images/searching/money.png');
 }
 section.intro p.store_service::before{
-  background-image: url('../images/searching/hello.png');
+  background-image: url('../images/searching/hospitality.png');
 }
 section.intro p.store_game::before{
-  background-image: url('../images/searching/board-game.png');
+  background-image: url('../images/searching/boardgame.png');
 }
 
 section.comment{
-	/* border: 1px solid yellow; */
-  display: -webkit-flex;
-  display: -ms-flex;
   display: flex;
-  width: 50%;
-  height: 100%;
 }
 section.comment p.store_comment::before{
   content:'';
-  display: inline-block;
+  display: block;
   width: 2rem;
   height: 2rem;
   background-size: contain;
@@ -226,11 +200,9 @@ section.comment p.store_comment::before{
 }
 
 section.comment div.comment_area{
-  /* border: 1px solid red; */
   overflow-y: scroll;
-  height: 18rem;
+  height: 25rem;
 }
-
 div.comment_area::-webkit-scrollbar {
   width: .5rem;
 }
@@ -254,15 +226,14 @@ section.comment div.comment_area div.user{
   border-radius: 10px;
   background-color: #fff;
   color: #000;
-  padding: .5rem;
+  padding: 1rem;
 }
 
 div.user span{
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.8rem;
   vertical-align:middle;
   font-weight: bold;
-  /* border: 1px solid green; */
 }
 div.user span:before{
   content:'';
@@ -276,7 +247,6 @@ div.user span:before{
 }
 div.user span:after{
   content: '';
-  /* border: 1px solid red; */
   display: inline-block;
   vertical-align:middle;
   height: 1rem;
@@ -320,4 +290,107 @@ div.comment5 span:after{
 }
 div.user p{
   margin-top: .5rem;
+  font-size: 1.5rem;
+}
+
+
+
+
+/* RWD */
+@media (max-width: 1500px) {
+  aside{
+    width: 40%;
+  }
+  main{
+    width: 60%;
+  }
+  section.photo_map{
+    display: block;
+  }
+  div.lSSlideOuter {
+    width: 100%;
+  }
+  .photo_map iframe{
+    width: 100%;
+    height: 500px;
+    margin: 3rem 0 0 0;
+  }
+  section.intro_comment1920{
+    display: none;
+  }
+  section.intro_comment1500{
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: block;
+    color: #fff;
+  }
+}
+@media (max-width: 950px){
+  div.content{
+    flex-direction: column;
+    align-items: center;
+  }
+  h2{
+    margin-top: 2rem;
+  }
+  aside{
+    width: 90%;
+    margin: 0 auto;
+    height: 4.9rem;
+    overflow:hidden;
+    transition: height .5s;
+    box-shadow: .5rem .5rem .5rem #000;
+  }
+  aside.slidedown{
+    height: 77rem;
+  }
+  aside > img{
+    display: block;
+    cursor: pointer;
+  }
+  aside > img:active{
+    transform: scale(.9);
+  }
+  main{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  section.intro{
+    font-weight: bold;
+    display: block;
+  }
+  section.intro_comment1500{
+    display: block;
+    width: 90%;
+  }
+}
+
+@media (max-width:500px){
+  html{
+    font-size: 12px;
+  }
+  section.comment div.comment_area div.user{
+    padding: 1.5rem;
+  }
+  section.comment div.comment_area{
+    height: 30rem;
+  }
+  .comment .comment_area span{
+    font-size: 2rem;
+  }
+  .comment .comment_area p{
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  section.photo_map div.photo img, .photo_map iframe{
+    height: 300px;
+  }
+  .main_menu a{
+    font-size: 3rem;
+  }
+}
+/* special footer css*/
+footer{
+  margin-top: 2rem;
 }

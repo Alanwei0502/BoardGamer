@@ -1,0 +1,181 @@
+/* burger burger */
+.burger_icon{
+  display: flex;
+  z-index: 101;
+  position: fixed;
+  right: 1rem;
+  display: none;
+  margin-top: 2.5rem;
+}
+label.burger{
+  display: block;
+  cursor: pointer;
+}
+.burger_line{
+  height: .5rem;
+  width: 4rem;
+  background-color: #de4b43;
+  margin: 5px 0;
+  border-radius: 1rem;
+  transition: .3s all linear;
+}
+input.checker{
+  display: none;
+}
+.checker:checked ~ .line_top, .checker:checked ~ .line_bottom{
+  opacity: 0;
+}
+.line_mid{
+  position: relative;
+  height: .5rem;
+  width: 4rem;
+  margin: 5px 0;
+  border-radius: 1rem;
+  transition: .3s all linear;
+}
+.line_mid1, .line_mid2{
+  background-color: #de4b43;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+.-cross1{
+  background-color: #2f375b;
+  transform: rotate(45deg);
+}
+.-cross2{
+  background-color: #2f375b;
+  transform: rotate(-225deg);
+}
+
+
+/* close_door animation of burger menu */
+.close_door{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  opacity: 0;
+  z-index: -2;
+  transition: opacity .5s ease;
+}
+.-show{
+  opacity: 1;
+  z-index: 100;
+}
+
+.menu{
+  background-color: #fec240;
+  color: #2f375b;
+  flex: 1;
+  transform: translateX(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* rightside menu */
+.main_menu{
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_menu a{
+  display: block;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #2f375b;
+  font-weight: bold;
+  padding: 1rem 5rem 1rem 5rem;
+  transition: transform .3s;
+}
+.main_menu a:hover{
+  transform: translateX(1rem);
+}
+
+.-left{
+  animation: slideInLeft .5s forwards;
+}
+.-right{
+  animation: slideInRight .5s forwards;
+}
+
+@keyframes slideInLeft{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes slideInRight{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+.-backleft{
+  animation: slideOutLeft .5s forwards;
+}
+.-backright{
+  animation: slideOutRight .5s forwards;
+}
+
+@keyframes slideOutLeft{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideOutRight{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+
+/* RWD */
+@media (max-width: 768px) {
+  .main_menu a{
+    font-size: 2rem;
+  }
+  .close_door{
+    flex-direction: column-reverse;
+  }
+  .showcase{
+    flex: .5;
+  }
+  .showcase_container{
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 500px) {
+  .showcase{
+    display: none;
+  }
+  .main_menu{
+    margin-bottom: 2rem;
+  }
+  .main_menu a{
+    font-size: 3rem;
+    padding: 1rem 0;
+  }
+}

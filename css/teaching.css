@@ -1,14 +1,15 @@
 @import "./bg_reset.css";
+@import "./header.css";
+@import "./footer.css";
 
 html{
   font-family: 'Microsoft JhengHei';
   box-sizing: border-box;
   background-color: #2f375b;
+  background-image: url('../images/teaching/letters.jpg');
 }
 .wrap{
   width: 100%;
-  background-image: url('../images/teaching/letters.jpg');
-  min-width: 1300px;
 }
 a, select{
   cursor: pointer;
@@ -16,70 +17,24 @@ a, select{
 
 /* header header header header header */
 header{
-  /* border: 1px solid red; */
   background-color: rgba(47, 55, 91, .8);
-  color: #fff;
-  padding: 1rem;
+  margin-bottom: 0;
+}
+
+/* container  container container container*/
+.anchor{
+  height: 8rem;
+}
+.container{
+  background-color: rgba(47, 55, 91, .8);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding-bottom: 2rem;
 }
-header div.logo_bread{
-	display: flex;
-	align-items: center;
-  min-width: 420px;
-	/* border: 1px solid green; */
-}
-header div.logo_bread > a{
-  border-radius: 50%;
-  display: inline-block;
-  background-color: #fff;
-}
-header .logo_bread > a > img{
-  width: 6rem;
-  height: 6rem;
-  animation-name: rotating;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 3s;
-}
-@keyframes rotating {
-  0%{
-    transform: rotateY(0deg);
-  }
-  100%{
-    transform:rotateY(360deg);
-  }
-}
-.logo_bread nav{
-	margin-left: 2rem;
-}
-.breadcrumb span{
-	padding: 0 .5rem;
-}
-.breadcrumb a{
-  /* text-decoration: none; */
-  color: #fff;
-}
-.breadcrumb .current{
-  color: #fec240;
-}
-.breadcrumb{
-	display: flex;
-}
-.burger{
-	width: 50px;
-	height: 50px;
-	background-color: #000;
-}
+/* tutorial_list tutorial_list*/
 .tutorial_list{
-  padding-left: 5rem;
-  min-width: 950px;
-}
-.lists{
-  display: flex;
-  justify-content: space-around;
-  /* border: 1px solid red; */
+  position: sticky;
+  top: 10%;
 }
 .lists a{
   text-decoration: none;
@@ -88,38 +43,31 @@ header .logo_bread > a > img{
   font-size: 1.5rem;
   font-weight: bold;
   transition: .2s;
+  padding: 2.5rem 1rem;
 }
 .lists a:hover{
   color: #fec240;
 }
-
-
-/* container  container container container*/
-.container{
-  background-color: rgba(47, 55, 91, .8);
-  /* border: 1px solid lightblue; */
-}
 /* main main main main main */
 main{
-  width: 1200px;
+  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
-
 }
-
 /* intro intro intro intro intro */
 .intro{
   background-image: url('../images/teaching/old_paper1.png');
   background-size: cover;
   color: #2f375b;
   padding: 2rem;
-  margin-bottom: 3rem;
+  border-radius: 2rem;
 }
 main h2{
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 2rem;
   position: relative;
-  margin-left: 2rem;
+  margin-left: 3rem;
   padding-left: .5rem;
 }
 main h2::before{
@@ -135,11 +83,16 @@ main h2::before{
   width: 3rem;
 }
 .intro p{
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
-  line-height: 2rem;
-  font-weight: bold;
+  line-height: 3rem;
+  /* font-weight: bold; */
   position: relative;
+}
+.intro p.sum{
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 4rem;
 }
 .intro div{
   display: flex;
@@ -153,7 +106,8 @@ main h2::before{
   background-size: cover;
   color: #2f375b;
   padding: 2rem;
-  margin-bottom: 3rem;
+  border-radius: 2rem;
+  overflow: hidden;
   /* border: 1px solid red; */
 }
 .right_cards, .left_cards{
@@ -168,27 +122,31 @@ main h2::before{
 }
 .cards div{
   /* border: 1px solid purple; */
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
 }
-.cards div img, .cards div p{
-  float: left;
+.card_p{
+  display: flex;
+}
+.cards div img{
+  display: block;
 }
 .cards div p{
   width: 65%;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-left: 1rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
   /* border: 1px solid orange; */
 }
 .cards img{
-  height: 200px;
+  height: 16rem;
   /* border: 1px solid green; */
 }
 .cards img.token{
-  width: 150px;
-  height: 150px;
+  height: 10rem;
 }
 .cards .character b{
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 3rem;
   font-weight: bold;
 }
@@ -201,23 +159,140 @@ main h2::before{
   background-size: cover;
   color: #2f375b;
   padding: 2rem;
-  margin-bottom: 3rem;
+  border-radius: 2rem;
+  overflow: hidden;
 }
 .process p{
-  margin-bottom: 2rem;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-size: 1.5rem;
+  line-height: 3rem;
+  margin-bottom: 5rem;
 }
 .process p span{
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
 }
 /* video video video video */
 .video{
   background-image: url('../images/teaching/old_paper1.png');
   background-size: cover;
   color: #2f375b;
-  padding: 2rem;
+  padding: 2rem 2rem 4rem;
+  border-radius: 2rem;
+  overflow: hidden;
 }
-.video div{
-  display: flex;
-  justify-content: center;
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 1250px) {
+  .right_cards, .left_cards{
+    width: 100%;
+    float: none;
+  }
+}
+
+@media (max-width: 800px) {
+  main{
+    width: 90%;
+  }
+  .cards{
+    padding: 2rem 0.5rem;
+  }
+
+  .intro div{
+    display: block;
+    text-align: center;
+  }
+  .intro div p{
+    text-align: left;
+  }
+  .container{
+    display: block;
+  }
+  .tutorial_list{
+    display: flex;
+    justify-content: center;
+    top: 0rem;
+    background-color: #2f375b;
+    z-index: 10;
+  }
+  .lists{
+    display: flex;
+  }
+  .lists a{
+    color: #fff;
+    padding: 3.5rem 1rem;
+  }
+  .right_cards, .left_cards{
+    width: 100%;
+    float: none;
+  }
+
+}
+@media (max-width: 550px) {
+  html{
+    font-size: 12px;
+  }
+  .main_menu a{
+    font-size: 3rem;
+  }
+  .intro p{
+    font-size: 2rem;
+  }
+  .intro p.sum{
+    margin-top: 3rem;
+    font-size: 2.5rem;
+  }
+  .cards div p{
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .cards .character b{
+    font-size: 2.5rem;
+  }
+  .process p{
+    font-size: 2rem;
+  }
+  .process p span{
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 500px) {
+  nav.tutorial_list{
+    display: none;
+  }
+}
+@media (max-width: 400px){
+  .card_p{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card_p p.character{
+    margin-left: 0;
+    width: 100%;
+    align-self: stretch;
+    text-align: center;
+  }
+  .card_p p.character b{
+    text-align: center;
+  }
+  .intro, .cards, .process, .video{
+    padding: 2rem 1rem;
+  }
+  .cards{
+    padding: 2rem 0.5rem;
+  }
 }
