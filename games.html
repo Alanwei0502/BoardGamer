@@ -1,334 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BoardGamer | 桌遊百科</title>
-  <link rel="shortcut icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./css/games.css">
-</head>
-<body>
-  <div class="wrap">
-    <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BoardGamer | 桌遊百科</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./css/games.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="logo_bread">
+          <a href="./index.html"><img src="./images/home/logo.png" alt="" /></a>
+          <nav aria-label="Breadcrumbs">
+            <ol class="breadcrumb">
+              <li><a href="./index.html">首頁</a><span>/</span></li>
+              <li class="current"><em aria-current="page">桌遊百科</em></li>
+            </ol>
+          </nav>
+        </div>
 
-      <div class="logo_bread">
-        <a href="./index.html"><img src="./images/home/logo.png" alt=""></a>
-        <nav aria-label="Breadcrumbs">
-          <ol class="breadcrumb">
-            <li><a href="./index.html">首頁</a><span>/</span></li>
-            <li class="current"><em aria-current="page">桌遊百科</em></li>
-          </ol>
-        </nav>
-      </div>
+        <div class="burger_icon">
+          <label class="burger">
+            <input class="checker" type="checkbox" id="checker" />
+            <div class="burger_line line_top"></div>
+            <div class="line_mid">
+              <div class="burger_line line_mid1"></div>
+              <div class="burger_line line_mid2"></div>
+            </div>
+            <div class="burger_line line_bottom"></div>
+          </label>
+        </div>
 
-      <div class="burger_icon">
-        <label class="burger">
-          <input class="checker" type="checkbox" id="checker">
-          <div class="burger_line line_top"></div>
-          <div class="line_mid">
-            <div class="burger_line line_mid1"></div>
-            <div class="burger_line line_mid2"></div>
+        <nav class="close_door">
+          <div class="showcase">
+            <div class="showcase_container">
+              <ul class="showcase_menu">
+                <li class="showcase_menu_list">
+                  <img src="./images/home/logo.png" alt="logo" />
+                </li>
+                <li class="showcase_menu_list">
+                  <img src="./images/searching/homepage.png" alt="homepage" />
+                </li>
+                <li class="showcase_menu_list">
+                  <img
+                    src="./images/searching/store.png"
+                    alt="searching store"
+                  />
+                </li>
+                <li class="showcase_menu_list">
+                  <img
+                    src="./images/searching/playing.png"
+                    alt="looking for party"
+                  />
+                </li>
+                <li class="showcase_menu_list">
+                  <img
+                    src="./images/searching/chess-pieces.png"
+                    alt="learning how to play boardgame"
+                  />
+                </li>
+                <li class="showcase_menu_list">
+                  <img
+                    src="./images/searching/membership.png"
+                    alt="membership"
+                  />
+                </li>
+                <li class="showcase_menu_list">
+                  <img src="./images/searching/group.png" alt="about us" />
+                </li>
+                <li class="showcase_menu_list">
+                  <img src="./images/searching/facebook1.png" alt="" />
+                </li>
+                <li class="showcase_menu_list">
+                  <img src="./images/searching/instagram.png" alt="" />
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="burger_line line_bottom"></div>
-        </label>
-      </div>
 
-      <nav class="close_door">
-        <div class="showcase">
-          <div class="showcase_container">
-            <ul class="showcase_menu">
-              <li class="showcase_menu_list"><img src="./images/home/logo.png" alt="logo"></li>
-              <li class="showcase_menu_list"><img src="./images/searching/homepage.png" alt="homepage"></li>
-              <li class="showcase_menu_list"><img src="./images/searching/store.png" alt="searching store"></li>
-              <li class="showcase_menu_list"><img src="./images/searching/playing.png" alt="looking for party"></li>
-              <li class="showcase_menu_list"><img src="./images/searching/chess-pieces.png" alt="learning how to play boardgame"></li>
-              <li class="showcase_menu_list"><img src="./images/searching/membership.png" alt="membership"></li>
-              <li class="showcase_menu_list"><img src="./images/searching/group.png" alt="about us"></li>
-              <li class="showcase_menu_list"><img src="./images/searching/facebook1.png" alt=""></li>
-              <li class="showcase_menu_list"><img src="./images/searching/instagram.png" alt=""></li>
+          <div class="menu">
+            <ul class="main_menu">
+              <li class="main_menu_list"><a href="./index.html">首頁</a></li>
+              <li class="main_menu_list">
+                <a href="./searching.html">尋找店家</a>
+              </li>
+              <li class="main_menu_list">
+                <a href="./playing.html">揪團開戰</a>
+              </li>
+              <li class="main_menu_list">
+                <a href="./games.html">桌遊百科</a>
+              </li>
+              <li class="main_menu_list">
+                <a href="./member.html">會員中心</a>
+              </li>
+              <li class="main_menu_list">
+                <a href="./about.html">關於我們</a>
+              </li>
+              <li class="main_menu_list"><a href="#0">Facebook</a></li>
+              <li class="main_menu_list"><a href="#0">Instagram</a></li>
             </ul>
           </div>
-        </div>
+        </nav>
+      </header>
 
-        <div class="menu">
-          <ul class="main_menu">
-            <li class="main_menu_list"><a href="./index.html">首頁</a></li>
-            <li class="main_menu_list"><a href="./searching.html">尋找店家</a></li>
-            <li class="main_menu_list"><a href="./playing.html">揪團開戰</a></li>
-            <li class="main_menu_list"><a href="./games.html">桌遊百科</a></li>
-            <li class="main_menu_list"><a href="./member2.html">會員中心</a></li>
-            <li class="main_menu_list"><a href="./about2.html">關於我們</a></li>
-            <li class="main_menu_list"><a href="#0">Facebook</a></li>
-            <li class="main_menu_list"><a href="#0">Instagram</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <section class="all_game">
-        <div class="game_list">
-          <ul>
-            <li class="party reaction pictomania games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>妙筆神猜</h2>
-                  <p >每個人畫一個謎題，同時也猜別人所畫的謎底，讓猜對的人和畫得正確的人都得分，動作快的人也有額外加分喔。快來培養你的畫家之路吧！</p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy seven_wonders games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>七大奇蹟</h2>
-                  <p >玩家在遊戲內扮演七大文明古國之一的領袖，目的是在遊戲結束時獲得最輝煌的成就，玩家必須不斷開採境內自然資源、發展貿易、樹立軍事強權。</p>
-                </div>
-              </a>
-            </li>
-            <li class="reaction party ghost games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>閃靈快手</h2>
-                  <p >如果你能快速地抓走正確的東西，你就有機會獲勝，只要物品顏色出現完全相同或完全不同時，都要立即搶物！這刺激有趣的遊戲，廣受玩家與家庭成員喜愛！</p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy resistance game_of_throne games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>權力遊戲</h2>
-                  <p >改編自同名影集【權力遊戲】，故事講述維特斯洛大陸上的紛爭和歷史，在桌遊中，每個玩家扮演大陸上各大家族勢力，率先控制七座城池的玩家獲勝，快來爭奪鐵王座！</p>
-                </div>
-              </a>
-            </li>
-            <li class="resistance party guess cooperation avalon games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>阿瓦隆</h2>
-                  <p >梅林法師和圓桌武士們為亞瑟王找尋聖杯的故事，然而在路途中，團隊卻混入了邪惡法師的爪牙，想要暗中破壞，干擾任務的進行。</p>
-                </div>
-              </a>
-            </li>
-            <li class="party resistance cooperation bang games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>Bang！</h2>
-                  <p>在這個子彈滿天飛的世界裡，歹徒獵殺警長，警長緝捕歹徒，叛徒則是正在偷偷策劃著準備對付其中一方。如果你想要知道真相那麼就拔起你的槍！</p>
-                </div>
-              </a>
-            </li>
-            <li class="guess strategy love_letter games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>情書</h2>
-                  <p>城裡所有的人，都想要一親暴風城公主芳澤。但事情當然沒那麼簡單，因為公主身處深宮內院，所以你連想送個情書都得託人送進去。究竟誰能率先送達呢？</p>
-                </div>
-              </a>
-            </li>
-            <li class="reaction party shashawa games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>傻傻玩</h2>
-                  <p>當有玩家收集到四張相同的動物牌時，所有人盡快奪取一枚桌上的水滴，由於水總是不夠給所有的動物喝，最終的勝利將屬於反應最快的玩家。馬上行動吧！</p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy cluedo games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>妙探尋兇</h2>
-                  <p>著名的人類學者約翰博迪先生在自家豪宅內遇害身亡，死因不明。遊戲中玩家們須利用有限的線索不斷的抽絲剝繭，才能調查出案情的真相，並將兇手繩之以法。</p>
-                </div>
-              </a>
-            </li>
-            <li class="party yellow_cards games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>黃牌</h2>
-                  <p>黃牌是一款老少不宜，成人限定的文字填空遊戲。想知道朋友的尺度在哪，這款桌遊倒是很好拿來用。</p>
-                </div>
-              </a>
-            </li>
-            <li class="cooperation unlock games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>大搜查</h2>
-                  <p>密室逃脫空間解謎遊戲移到桌面上！【大搜查】是一款合作類型的卡片遊戲。透過搜尋線索、結合物品和解鎖的簡單機制密是逃脫遊戲的啟發。</p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy hab_gut games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>期貨時代</h2>
-                  <p>期貨時代是一款可以輕鬆上手的股票交易類遊戲，玩家必須分享彼此的資訊，觀望市場其他玩家的買賣，掌控自己的資金，選擇最有潛力的期貨，來獲得遊戲的勝利。</p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy catan games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>卡坦島</h2>
-                  <p>勇敢的拓荒者，來到這座不知名的島上。創立村莊，收集資源，鋪設道路，興建城市，交易各取所需，解決資源不均的問題。你是否能從群雄中脫穎而出，稱霸卡坦島？</p>
-                </div>
-              </a>
-            </li>
-            <li class="cooperation party the_mind games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>心靈同步</h2>
-                  <p>心靈極度需要團隊合作，不分享資訊的情況下，所有玩家必須將手牌依數字大小遞增打出。不要懷疑自己的第六感，只要默契十足，就能過關斬將，完成每一級的挑戰！</p>
-                </div>
-              </a>
-            </li>
-            <li class="guess kuhhandle games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>幕後交易</h2>
-                  <p>玩家一起參加可愛動物拍賣會，運用手上的金錢，拍賣喊價購買動物，也可以和對方幕後交易。在交易的過程中，要小心對方騙人，同時也要專心騙對方的動物。</p>
-                </div>
-              </a>
-            </li>
-            <li class="party cantstop games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>欲罷不能</h2>
-                  <p>在賭場中，骰子遊戲令人著迷，我們不是神，無法得知下一個擲出的數字是什麼，唯有願意承擔風險，又受到幸運女神的眷顧，才能贏得勝利。</p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy carcassonne games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>卡卡頌</h2>
-                  <p>卡卡頌位於法國南部的一座美麗古城，也是中時代教會對抗異教徒的重鎮，玩家扮演中世紀的諸侯，派出部下攻城掠地，遊戲結束時最高分就贏了。
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy guess citadels games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>富饒之城</h2>
-                  <p>玩家在遊戲中要扮演中古世紀歐洲的城主，分別邀請重要人物來到你的城市幫忙建設或妨礙他人，當有玩家蓋到第八棟建築物時遊戲結束，結算分數。</p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy coal_baron games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>煤礦大亨</h2>
-                  <p>埃森是德國著名的煤礦產地，玩家扮演工業革命時期的煤礦公司，管理自己的礦坑，從訂單、挖礦、出貨一手包辦，試著成為最著名的煤礦公司吧！</p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy manila games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>馬尼拉</h2>
-                  <p>1821年，受西班牙殖民的菲律賓首都-馬尼拉，玩家扮演當時的走私商，透過平底船來走私貨物，想要體驗馬尼拉黑市交易的過程嗎？快來瞧瞧吧！</p>
-                </div>
-              </a>
-            </li>
-            <li class="party reaction ouat games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>從前從前</h2>
-                  <p>壯烈的冒險？浪漫的愛情？惡毒的詛咒？說個獨屬於你的奇幻冒險故事！本遊戲的樂趣不是在於獲勝，而是在一起說故事中獲得樂趣！</p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy splendor games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>璀璨寶石</h2>
-                  <p>玩家扮演文藝復興時期的商人，準備透過製作完成的珠寶，吸引貴族上門拜訪！拿取寶石和黃金購買發展牌，並得到威望分數和額外寶石獎勵。</p>
-                </div>
-              </a>
-            </li>
-            <li class="strategy stoneage games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>石器時代</h2>
-                  <p>石器時代，農業誕生了。人類開始採集更多的自然資源，並且出現簡單的房舍。你是一位部落的酋長，快帶領你的族人，走向勝利吧。</p>
-                </div>
-              </a>
-            </li>
-            <li class="party take6 games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>誰是牛頭王</h2>
-                  <p>這是一個絕對讓您感到刺激、出乎意料、不按排理出牌的超級瘋狂聚會遊戲！人越多越好玩！</p>
-                </div>
-              </a>
-            </li>
-            <li class="party talkn_guess games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>侃侃而猜</h2>
-                  <p>過往的回憶跟經驗也能變成遊戲，侃侃而猜讓玩家來分享自己的事，即使是同樣的事情，在不同的人身上，也有決然不同的感受。</p>
-                </div>
-              </a>
-            </li>
-            <li class="cooperation guess resistance betrayal-house-hill games">
-              <a href="./teaching.html" class="game">
-                <div class="photo"></div>
-                <div class="info">
-                  <h2>山中小屋</h2>
-                  <p>玩家受邀來到深山中一座豪宅，當所有人進屋後，大門卻被鎖上了，而屋中不斷發生詭異的事件，玩家必須尋找逃離的辦法。然而，在不知不覺中，有人成為了背叛者！</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <button type="button">更多遊戲</button>
-      </section>
-
-      <aside class="filter">
-        <h2>桌遊篩選器</h2>
-        <label for="search">直接搜尋
-          <div class="search_icon">
-            <input type="text"><img src="./images/games/search.png" alt="">
+      <main>
+        <section class="all_game">
+          <div class="game_list">
+            <ul>
+              <li class="party reaction pictomania games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>妙筆神猜</h2>
+                    <p>
+                      每個人畫一個謎題，同時也猜別人所畫的謎底，讓猜對的人和畫得正確的人都得分，動作快的人也有額外加分喔。快來培養你的畫家之路吧！
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy seven_wonders games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>七大奇蹟</h2>
+                    <p>
+                      玩家在遊戲內扮演七大文明古國之一的領袖，目的是在遊戲結束時獲得最輝煌的成就，玩家必須不斷開採境內自然資源、發展貿易、樹立軍事強權。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="reaction party ghost games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>閃靈快手</h2>
+                    <p>
+                      如果你能快速地抓走正確的東西，你就有機會獲勝，只要物品顏色出現完全相同或完全不同時，都要立即搶物！這刺激有趣的遊戲，廣受玩家與家庭成員喜愛！
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy resistance game_of_throne games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>權力遊戲</h2>
+                    <p>
+                      改編自同名影集【權力遊戲】，故事講述維特斯洛大陸上的紛爭和歷史，在桌遊中，每個玩家扮演大陸上各大家族勢力，率先控制七座城池的玩家獲勝，快來爭奪鐵王座！
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="resistance party guess cooperation avalon games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>阿瓦隆</h2>
+                    <p>
+                      梅林法師和圓桌武士們為亞瑟王找尋聖杯的故事，然而在路途中，團隊卻混入了邪惡法師的爪牙，想要暗中破壞，干擾任務的進行。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="party resistance cooperation bang games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>Bang！</h2>
+                    <p>
+                      在這個子彈滿天飛的世界裡，歹徒獵殺警長，警長緝捕歹徒，叛徒則是正在偷偷策劃著準備對付其中一方。如果你想要知道真相那麼就拔起你的槍！
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="guess strategy love_letter games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>情書</h2>
+                    <p>
+                      城裡所有的人，都想要一親暴風城公主芳澤。但事情當然沒那麼簡單，因為公主身處深宮內院，所以你連想送個情書都得託人送進去。究竟誰能率先送達呢？
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="reaction party shashawa games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>傻傻玩</h2>
+                    <p>
+                      當有玩家收集到四張相同的動物牌時，所有人盡快奪取一枚桌上的水滴，由於水總是不夠給所有的動物喝，最終的勝利將屬於反應最快的玩家。馬上行動吧！
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy cluedo games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>妙探尋兇</h2>
+                    <p>
+                      著名的人類學者約翰博迪先生在自家豪宅內遇害身亡，死因不明。遊戲中玩家們須利用有限的線索不斷的抽絲剝繭，才能調查出案情的真相，並將兇手繩之以法。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="party yellow_cards games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>黃牌</h2>
+                    <p>
+                      黃牌是一款老少不宜，成人限定的文字填空遊戲。想知道朋友的尺度在哪，這款桌遊倒是很好拿來用。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="cooperation unlock games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>大搜查</h2>
+                    <p>
+                      密室逃脫空間解謎遊戲移到桌面上！【大搜查】是一款合作類型的卡片遊戲。透過搜尋線索、結合物品和解鎖的簡單機制密是逃脫遊戲的啟發。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy hab_gut games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>期貨時代</h2>
+                    <p>
+                      期貨時代是一款可以輕鬆上手的股票交易類遊戲，玩家必須分享彼此的資訊，觀望市場其他玩家的買賣，掌控自己的資金，選擇最有潛力的期貨，來獲得遊戲的勝利。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy catan games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>卡坦島</h2>
+                    <p>
+                      勇敢的拓荒者，來到這座不知名的島上。創立村莊，收集資源，鋪設道路，興建城市，交易各取所需，解決資源不均的問題。你是否能從群雄中脫穎而出，稱霸卡坦島？
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="cooperation party the_mind games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>心靈同步</h2>
+                    <p>
+                      心靈極度需要團隊合作，不分享資訊的情況下，所有玩家必須將手牌依數字大小遞增打出。不要懷疑自己的第六感，只要默契十足，就能過關斬將，完成每一級的挑戰！
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="guess kuhhandle games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>幕後交易</h2>
+                    <p>
+                      玩家一起參加可愛動物拍賣會，運用手上的金錢，拍賣喊價購買動物，也可以和對方幕後交易。在交易的過程中，要小心對方騙人，同時也要專心騙對方的動物。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="party cantstop games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>欲罷不能</h2>
+                    <p>
+                      在賭場中，骰子遊戲令人著迷，我們不是神，無法得知下一個擲出的數字是什麼，唯有願意承擔風險，又受到幸運女神的眷顧，才能贏得勝利。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy carcassonne games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>卡卡頌</h2>
+                    <p>
+                      卡卡頌位於法國南部的一座美麗古城，也是中時代教會對抗異教徒的重鎮，玩家扮演中世紀的諸侯，派出部下攻城掠地，遊戲結束時最高分就贏了。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy guess citadels games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>富饒之城</h2>
+                    <p>
+                      玩家在遊戲中要扮演中古世紀歐洲的城主，分別邀請重要人物來到你的城市幫忙建設或妨礙他人，當有玩家蓋到第八棟建築物時遊戲結束，結算分數。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy coal_baron games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>煤礦大亨</h2>
+                    <p>
+                      埃森是德國著名的煤礦產地，玩家扮演工業革命時期的煤礦公司，管理自己的礦坑，從訂單、挖礦、出貨一手包辦，試著成為最著名的煤礦公司吧！
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy manila games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>馬尼拉</h2>
+                    <p>
+                      1821年，受西班牙殖民的菲律賓首都-馬尼拉，玩家扮演當時的走私商，透過平底船來走私貨物，想要體驗馬尼拉黑市交易的過程嗎？快來瞧瞧吧！
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="party reaction ouat games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>從前從前</h2>
+                    <p>
+                      壯烈的冒險？浪漫的愛情？惡毒的詛咒？說個獨屬於你的奇幻冒險故事！本遊戲的樂趣不是在於獲勝，而是在一起說故事中獲得樂趣！
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy splendor games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>璀璨寶石</h2>
+                    <p>
+                      玩家扮演文藝復興時期的商人，準備透過製作完成的珠寶，吸引貴族上門拜訪！拿取寶石和黃金購買發展牌，並得到威望分數和額外寶石獎勵。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="strategy stoneage games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>石器時代</h2>
+                    <p>
+                      石器時代，農業誕生了。人類開始採集更多的自然資源，並且出現簡單的房舍。你是一位部落的酋長，快帶領你的族人，走向勝利吧。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="party take6 games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>誰是牛頭王</h2>
+                    <p>
+                      這是一個絕對讓您感到刺激、出乎意料、不按排理出牌的超級瘋狂聚會遊戲！人越多越好玩！
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="party talkn_guess games">
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>侃侃而猜</h2>
+                    <p>
+                      過往的回憶跟經驗也能變成遊戲，侃侃而猜讓玩家來分享自己的事，即使是同樣的事情，在不同的人身上，也有決然不同的感受。
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li
+                class="cooperation guess resistance betrayal-house-hill games"
+              >
+                <a href="./teaching.html" class="game">
+                  <div class="photo"></div>
+                  <div class="info">
+                    <h2>山中小屋</h2>
+                    <p>
+                      玩家受邀來到深山中一座豪宅，當所有人進屋後，大門卻被鎖上了，而屋中不斷發生詭異的事件，玩家必須尋找逃離的辦法。然而，在不知不覺中，有人成為了背叛者！
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
-        </label>
-        <label for="type">遊戲類型</label>
-        <select name="type" id="type">
-          <option value="" selected></option>
-          <option value="party">派對</option>
-          <option value="strategy">策略</option>
-          <option value="reaction">反應</option>
-          <option value="resistance">陣營</option>
-          <option value="guess">猜心</option>
-          <option value="cooperation">合作</option>
-        </select>
+          <button type="button">更多遊戲</button>
+        </section>
 
-        <label for="people">玩家人數</label>
+        <aside class="filter">
+          <h2>桌遊篩選器</h2>
+          <label for="search"
+            >直接搜尋
+            <div class="search_icon">
+              <input type="text" /><img
+                src="./images/games/search.png"
+                alt=""
+              />
+            </div>
+          </label>
+          <label for="type">遊戲類型</label>
+          <select name="type" id="type">
+            <option value="" selected></option>
+            <option value="party">派對</option>
+            <option value="strategy">策略</option>
+            <option value="reaction">反應</option>
+            <option value="resistance">陣營</option>
+            <option value="guess">猜心</option>
+            <option value="cooperation">合作</option>
+          </select>
+
+          <label for="people">玩家人數</label>
           <select name="people" id="people">
             <option value="" selected></option>
             <option value="2">2</option>
@@ -356,9 +452,9 @@
         <li><a href="#0">免責聲明</a></li>
         <li><a href="#0">隱私權政策</a></li>
       </ul>
-      <span>Copyright© 2020 BoardGamer  All rights reserved</span>
+      <span>Copyright© 2020 BoardGamer All rights reserved</span>
     </footer>
     <script src="./js/jquery.js"></script>
     <script src="./js/games.js"></script>
   </body>
-  </html>
+</html>

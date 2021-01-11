@@ -227,7 +227,7 @@ main > section.all_game{
 /* filter filter filter filter filter */
 aside.filter{
   position: sticky;
-  top: 8rem;
+  top: 7rem;
   right: 0px;
   display: flex;
   flex-direction: column;
@@ -259,12 +259,12 @@ aside.filter{
   height: 2.5rem;
 }
 .filter label{
-  margin-top: 4rem;
-  font-size: 2rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .filter h2{
-  font-size: 3rem;
+  font-size: 2rem;
   width: 100%;
   white-space: nowrap;
   font-weight: bold;
@@ -274,7 +274,7 @@ aside.filter{
   outline: none;
   border: 0;
   height: 3rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .filter select{

@@ -1,242 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BoardGamer | 首頁</title>
-  <link rel="shortcut icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/lightslider.css">
-  <link rel="stylesheet" href="./css/fontawesome/all.css">
-  <script src="./js/jquery.js"></script>
-  <script src="js/lightslider.js"></script>
-  <script src="./js/fontawesome/all.js"></script>
-</head>
-<body>
-
-  <div class="wrap">
-
-    <div class="bg_filter">
-      <div class="modal" id="modal">
-        <img src="./images/home/close.png" alt="" id="close">
-        <div class="form-container sign-up-container">
-          <form action="#">
-            <h3>會員註冊</h3>
-            <input type="text" placeholder="帳號" />
-            <input type="email" placeholder="信箱" />
-            <input type="password" placeholder="密碼" />
-            <button type="submit">註冊</button>
-          </form>
-        </div>
-        <div class="form-container sign-in-container">
-          <form action="#">
-            <h3>會員登入</h3>
-            <input type="text" placeholder="帳號" />
-            <input type="password" placeholder="密碼" />
-            <a href="./member2.html">忘記密碼？</a>
-            <button type="submit" id="login">登入</button>
-          </form>
-        </div>
-        <div class="overlay-container">
-          <div class="overlay">
-            <div class="overlay-panel overlay-left">
-              <h3>新朋友你好！</h3>
-              <p>還沒加入會員？<br>趕快註冊累積點數吧！</p>
-              <span>已經是會員？</span>
-              <button id="signIn">登入</button>
-            </div>
-            <div class="overlay-panel overlay-right">
-              <h3>歡迎回來！</h3>
-              <p>好多揪團等著你參加，保持登入才不會漏掉最新消息喔！</p>
-              <span>還不是會員？</span>
-              <button id="signUp">註冊</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BoardGamer | 首頁</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/lightslider.css" />
+    <link rel="stylesheet" href="./css/fontawesome/all.css" />
+    <script src="./js/jquery.js"></script>
+    <script src="js/lightslider.js"></script>
+    <script src="./js/fontawesome/all.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="bg_filter">
+        <div class="modal" id="modal">
+          <img src="./images/home/close.png" alt="" id="close" />
+          <div class="form-container sign-up-container">
+            <form action="#">
+              <h3>會員註冊</h3>
+              <input type="text" placeholder="帳號" />
+              <input type="email" placeholder="信箱" />
+              <input type="password" placeholder="密碼" />
+              <button type="submit">註冊</button>
+            </form>
+          </div>
+          <div class="form-container sign-in-container">
+            <form action="#">
+              <h3>會員登入</h3>
+              <input type="text" placeholder="帳號" />
+              <input type="password" placeholder="密碼" />
+              <a href="./member.html">忘記密碼？</a>
+              <button type="submit" id="login">登入</button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h3>新朋友你好！</h3>
+                <p>還沒加入會員？<br />趕快註冊累積點數吧！</p>
+                <span>已經是會員？</span>
+                <button id="signIn">登入</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h3>歡迎回來！</h3>
+                <p>好多揪團等著你參加，保持登入才不會漏掉最新消息喔！</p>
+                <span>還不是會員？</span>
+                <button id="signUp">註冊</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="burger_icon">
-      <label class="burger">
-        <input class="checker" type="checkbox" id="checker">
-        <div class="burger_line line_top"></div>
-        <div class="line_mid">
-          <div class="burger_line line_mid1"></div>
-          <div class="burger_line line_mid2"></div>
-        </div>
-        <div class="burger_line line_bottom"></div>
-      </label>
-    </div>
-
-    <nav class="close_door">
-      <div class="menu">
-        <ul class="main_menu">
-          <li class="main_menu_list"><a href="./index.html">首頁</a></li>
-          <li class="main_menu_list"><a href="./searching.html">尋找店家</a></li>
-          <li class="main_menu_list"><a href="./playing.html">揪團開戰</a></li>
-          <li class="main_menu_list"><a href="./games.html">桌遊百科</a></li>
-          <li class="main_menu_list"><a href="#0" id="member_phone">會員中心</a></li>
-          <li class="main_menu_list"><a href="./about2.html">關於我們</a></li>
-          <li class="main_menu_list"><a href="#0">Facebook</a></li>
-          <li class="main_menu_list"><a href="#0">Instagram</a></li>
-        </ul>
+      <div class="burger_icon">
+        <label class="burger">
+          <input class="checker" type="checkbox" id="checker" />
+          <div class="burger_line line_top"></div>
+          <div class="line_mid">
+            <div class="burger_line line_mid1"></div>
+            <div class="burger_line line_mid2"></div>
+          </div>
+          <div class="burger_line line_bottom"></div>
+        </label>
       </div>
-    </nav>
 
-    <header>
-      <a href="#0" class="mini_logo"><img src="./images/home/logo.png" alt=""></a>
-
-      <nav>
-        <ul class="smallMenu">
-          <li><a href="#0" class="member" id="member">會員中心</a></li>
-          <li><a href="./about2.html" class="about">關於我們</a></li>
-          <li><a href="#0" class="social fb"><img src="./images/home/facebook.png" alt=""></a></li>
-          <li><a href="#0" class="social ig"><img src="./images/home/instagram.png" alt=""></a></li>
-        </ul>
+      <nav class="close_door">
+        <div class="menu">
+          <ul class="main_menu">
+            <li class="main_menu_list"><a href="./index.html">首頁</a></li>
+            <li class="main_menu_list">
+              <a href="./searching.html">尋找店家</a>
+            </li>
+            <li class="main_menu_list">
+              <a href="./playing.html">揪團開戰</a>
+            </li>
+            <li class="main_menu_list"><a href="./games.html">桌遊百科</a></li>
+            <li class="main_menu_list">
+              <a href="#0" id="member_phone">會員中心</a>
+            </li>
+            <li class="main_menu_list"><a href="./about.html">關於我們</a></li>
+            <li class="main_menu_list"><a href="#0">Facebook</a></li>
+            <li class="main_menu_list"><a href="#0">Instagram</a></li>
+          </ul>
+        </div>
       </nav>
-    </header>
-    <div class="modal">
 
-    </div>
-    <main>
-      <div class="logo">
-        <h1><a href="#0"><img src="./images/home/logo.png" alt=""></a></h1>
-        <div class="introduction">跟隨召喚的聲音<br>打開紙盒子<br>感受桌遊的魔幻時刻</div>
-        <div class="loading">
-          <div class="loading_line"></div>
-        </div>
-      </div>
-      <nav>
-        <ul class="three_mains">
-          <li>
-            <a href="./searching.html" class="finding_store">
-              <div class="filter yellow_filter"></div>
-              <h2>尋找店家</h2>
-            </a>
-          </li>
-          <li>
-            <a href="./playing.html" class="playing_game">
-              <div class="filter blue_filter"></div>
-              <h2>揪團開戰</h2>
-            </a>
-          </li>
-          <li>
-            <a href="./games.html" class="game_tutorial">
-              <div class="filter red_filter"></div>
-              <h2>桌遊百科</h2>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </main>
+      <header>
+        <a href="#0" class="mini_logo"
+          ><img src="./images/home/logo.png" alt=""
+        /></a>
 
-    <section class="news">
-      <h3>最新消息</h3>
-      <div class="slider">
-        <div class="slider-row">
-          <a href="http://www.swanpanasia.com/event/swancon" class="news1" target="_blank"></a>
-          <a href="http://203.72.185.5/~21538/website/profit.htm" class="news2" target="_blank"></a>
-          <a href="https://www.gokids.com.tw/article/article.php?articleid=188" class="news3" target="_blank"></a>
-          <a href="https://www.phantasia.tw/news/news_view/1718" class="news4" target="_blank"></a>
-          <a href="https://www.facebook.com/BGFes.TW/" class="news5" target="_blank"></a>
+        <nav>
+          <ul class="smallMenu">
+            <li><a href="#0" class="member" id="member">會員中心</a></li>
+            <li><a href="./about.html" class="about">關於我們</a></li>
+            <li>
+              <a href="#0" class="social fb"
+                ><img src="./images/home/facebook.png" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#0" class="social ig"
+                ><img src="./images/home/instagram.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="modal"></div>
+      <main>
+        <div class="logo">
+          <h1>
+            <a href="#0"><img src="./images/home/logo.png" alt="" /></a>
+          </h1>
+          <div class="introduction">
+            跟隨召喚的聲音<br />打開紙盒子<br />感受桌遊的魔幻時刻
+          </div>
+          <div class="loading">
+            <div class="loading_line"></div>
+          </div>
         </div>
+        <nav>
+          <ul class="three_mains">
+            <li>
+              <a href="./searching.html" class="finding_store">
+                <div class="filter yellow_filter"></div>
+                <h2>尋找店家</h2>
+              </a>
+            </li>
+            <li>
+              <a href="./playing.html" class="playing_game">
+                <div class="filter blue_filter"></div>
+                <h2>揪團開戰</h2>
+              </a>
+            </li>
+            <li>
+              <a href="./games.html" class="game_tutorial">
+                <div class="filter red_filter"></div>
+                <h2>桌遊百科</h2>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </main>
+
+      <section class="news">
+        <h3>最新消息</h3>
+        <div class="slider">
+          <div class="slider-row">
+            <a
+              href="http://www.swanpanasia.com/event/swancon"
+              class="news1"
+              target="_blank"
+            ></a>
+            <a
+              href="http://203.72.185.5/~21538/website/profit.htm"
+              class="news2"
+              target="_blank"
+            ></a>
+            <a
+              href="https://www.gokids.com.tw/article/article.php?articleid=188"
+              class="news3"
+              target="_blank"
+            ></a>
+            <a
+              href="https://www.phantasia.tw/news/news_view/1718"
+              class="news4"
+              target="_blank"
+            ></a>
+            <a
+              href="https://www.facebook.com/BGFes.TW/"
+              class="news5"
+              target="_blank"
+            ></a>
+          </div>
+        </div>
+        <div class="newsList768">
+          <ul>
+            <li>
+              <a href="http://www.swanpanasia.com/event/swancon" target="_blank"
+                >2020~2021天鵝桌遊聚會SwanCon</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://203.72.185.5/~21538/website/profit.htm"
+                target="_blank"
+                >2020月光桌遊節 - Moonlight Boardgame Festival</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.gokids.com.tw/article/article.php?articleid=188"
+                target="_blank"
+                >瘋桌遊 - 桌遊拍賣會開麥啦！</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.phantasia.tw/news/news_view/1718"
+                target="_blank"
+                >夏日桌遊嘉年華</a
+              >
+            </li>
+            <li>
+              <a href="https://www.facebook.com/BGFes.TW/" target="_blank"
+                >你所不知桌遊的十大好處</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="product">
+        <h3>新品上市</h3>
+        <div class="carousel_outside">
+          <div class="carousel_product">
+            <div class="items">
+              <a href="./teaching.html">
+                <img src="./images/home/marcopolo.png" alt="" />
+                <p>馬可波羅將繼續他的旅程，這次遊歷的範圍在亞洲地區...</p>
+              </a>
+            </div>
+            <div class="items">
+              <a href="./teaching.html">
+                <img src="./images/home/detective_club.png" alt="" />
+                <p>只有細心且機靈的人才能獲得最後的勝利！</p>
+              </a>
+            </div>
+            <div class="items">
+              <a href="./teaching.html">
+                <img src="./images/home/top_hero.png" alt="" />
+                <p>
+                  真正的英雄，通常不是來得早的傢伙，因為，歷史都是「後人」寫的……
+                </p>
+              </a>
+            </div>
+            <div class="items">
+              <a href="./teaching.html">
+                <img src="./images/home/once_upon_the_time.png" alt="" />
+                <p>在童話故事裡，每種動物都有自己的故事！</p>
+              </a>
+            </div>
+            <div class="items">
+              <a href="./teaching.html">
+                <img src="./images/home/camelup.png" alt="" />
+                <p>
+                  身為埃及上流社會的你，來到這裡試試手氣，對自己看好的駱駝下注，贏得最多獎金。
+                </p>
+              </a>
+            </div>
+            <div class="items">
+              <a href="./teaching.html">
+                <img src="./images/home/draw_sn_roll.png" alt="" />
+                <p>
+                  在骰子上作畫，讓對手猜出你的主題，你也要盡力猜到對手的答案。
+                </p>
+              </a>
+            </div>
+            <div class="items">
+              <a href="./teaching.html">
+                <img src="./images/home/stolenpainting.png" alt="" />
+                <p>擔任偵探的玩家們能找出失竊的畫作，成為高超的偵探嗎？</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe_go_top">
+        <section class="subscribe">
+          <h3>電子報訂閱</h3>
+          <form action="">
+            <input type="text" placeholder="boardgamer@gmail.com" />
+            <div class="click">
+              <div>新訊息天天不漏接！</div>
+              <img src="./images/home/point_right.png" alt="" />
+              <button type="submit">訂閱</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="join_us">
+          <h3>BG夥伴</h3>
+          <p>
+            如果工作就像在玩樂，那就一點也不覺得累。<br />想要成為桌遊工作者嗎?<br />歡迎對桌遊充滿熱情的你和妳，快來加入我們吧！
+          </p>
+          <div><button type="button">加入我們</button></div>
+        </section>
+      </section>
+      <div class="back_to_top_outside">
+        <div class="back_to_top"></div>
       </div>
-      <div class="newsList768">
+      <footer>
         <ul>
-          <li><a href="http://www.swanpanasia.com/event/swancon" target="_blank">2020~2021天鵝桌遊聚會SwanCon</a></li>
-          <li><a href="http://203.72.185.5/~21538/website/profit.htm" target="_blank">2020月光桌遊節 - Moonlight Boardgame Festival</a></li>
-          <li><a href="https://www.gokids.com.tw/article/article.php?articleid=188" target="_blank">瘋桌遊 - 桌遊拍賣會開麥啦！</a></li>
-          <li>  <a href="https://www.phantasia.tw/news/news_view/1718" target="_blank">夏日桌遊嘉年華</a></li>
-          <li><a href="https://www.facebook.com/BGFes.TW/" target="_blank">你所不知桌遊的十大好處</a></li>
+          <li><a href="#0">網站使用條款</a></li>
+          <li><a href="#0">免責聲明</a></li>
+          <li><a href="#0">隱私權政策</a></li>
         </ul>
-      </div>
-    </section>
-
-    <section class="product">
-      <h3>新品上市</h3>
-      <div class="carousel_outside">
-        <div class="carousel_product">
-          <div class="items">
-            <a href="./teaching.html">
-              <img src="./images/home/marcopolo.png" alt="">
-              <p>馬可波羅將繼續他的旅程，這次遊歷的範圍在亞洲地區...</p>
-            </a>
-          </div>
-          <div class="items">
-            <a href="./teaching.html">
-              <img src="./images/home/detective_club.png" alt="">
-              <p>只有細心且機靈的人才能獲得最後的勝利！</p>
-            </a>
-          </div>
-          <div class="items">
-            <a href="./teaching.html">
-              <img src="./images/home/top_hero.png" alt="">
-              <p>真正的英雄，通常不是來得早的傢伙，因為，歷史都是「後人」寫的……</p>
-            </a>
-          </div>
-          <div class="items">
-            <a href="./teaching.html">
-              <img src="./images/home/once_upon_the_time.png" alt="">
-              <p>在童話故事裡，每種動物都有自己的故事！</p>
-            </a>
-          </div>
-          <div class="items">
-            <a href="./teaching.html">
-              <img src="./images/home/camelup.png" alt="">
-              <p>身為埃及上流社會的你，來到這裡試試手氣，對自己看好的駱駝下注，贏得最多獎金。</p>
-            </a>
-          </div>
-          <div class="items">
-            <a href="./teaching.html">
-              <img src="./images/home/draw_sn_roll.png" alt="">
-              <p>在骰子上作畫，讓對手猜出你的主題，你也要盡力猜到對手的答案。</p>
-            </a>
-          </div>
-          <div class="items">
-            <a href="./teaching.html">
-              <img src="./images/home/stolenpainting.png" alt="">
-              <p>擔任偵探的玩家們能找出失竊的畫作，成為高超的偵探嗎？</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="subscribe_go_top">
-
-      <section class="subscribe">
-        <h3>電子報訂閱</h3>
-        <form action="">
-          <input type="text" placeholder="boardgamer@gmail.com">
-          <div class="click">
-            <div>新訊息天天不漏接！</div>
-            <img src="./images/home/point_right.png" alt="">
-            <button type="submit">訂閱</button>
-          </div>
-        </form>
-      </section>
-
-      <section class="join_us">
-        <h3>BG夥伴</h3>
-        <p>如果工作就像在玩樂，那就一點也不覺得累。<br>想要成為桌遊工作者嗎?<br>歡迎對桌遊充滿熱情的你和妳，快來加入我們吧！</p>
-        <div><button type="button">加入我們</button></div>
-      </section>
-
-    </section>
-    <div class="back_to_top_outside">
-      <div class="back_to_top"></div>
+        <span>Copyright© 2020 BoardGamer All rights reserved</span>
+      </footer>
     </div>
-    <footer>
-      <ul>
-        <li><a href="#0">網站使用條款</a></li>
-        <li><a href="#0">免責聲明</a></li>
-        <li><a href="#0">隱私權政策</a></li>
-      </ul>
-      <span>Copyright© 2020 BoardGamer  All rights reserved</span>
-    </footer>
-
-  </div>
-  <script src="./js/index.js"></script>
-</body>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

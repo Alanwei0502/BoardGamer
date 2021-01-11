@@ -1,7 +1,7 @@
 @import "./bg_reset.css";
 
 /* header */
-header{
+header {
   color: #fff;
   padding: 1rem;
   display: flex;
@@ -10,16 +10,16 @@ header{
   margin-bottom: 1rem;
   position: relative;
 }
-header div.logo_bread{
+header div.logo_bread {
   display: flex;
   align-items: center;
 }
-header div.logo_bread > a{
+header div.logo_bread > a {
   border-radius: 50%;
   display: inline-block;
   background-color: #fff;
 }
-header .logo_bread > a > img{
+header .logo_bread > a > img {
   width: 6rem;
   height: 6rem;
   /* animation-name: rotating;
@@ -35,82 +35,81 @@ header .logo_bread > a > img{
     transform:rotateY(360deg);
   }
 } */
-header div.logo_bread nav{
+header div.logo_bread nav {
   margin-left: 2rem;
 }
-header ol.breadcrumb span{
-  padding: 0 .5rem;
+header ol.breadcrumb span {
+  padding: 0 0.5rem;
 }
-header ol.breadcrumb li{
+header ol.breadcrumb li {
   font-size: 1.5rem;
   font-weight: bold;
 }
-header ol.breadcrumb a{
+header ol.breadcrumb a {
   color: #fff;
   text-decoration: none;
 }
 
-header ol.breadcrumb .current{
+header ol.breadcrumb .current {
   color: #fec240;
 }
-header ol.breadcrumb{
+header ol.breadcrumb {
   display: flex;
 }
 
-
-
 /* burger burger */
-.burger_icon{
+.burger_icon {
   display: flex;
   z-index: 101;
   position: fixed;
   right: 1rem;
 }
-label.burger{
+label.burger {
   display: block;
   cursor: pointer;
 }
-.burger_line{
-  height: .5rem;
+.burger_line {
+  height: 0.5rem;
   width: 4rem;
   background-color: #de4b43;
   margin: 5px 0;
   border-radius: 1rem;
-  transition: .3s all linear;
+  transition: 0.3s all linear;
 }
-input.checker{
+input.checker {
   display: none;
 }
-.checker:checked ~ .line_top, .checker:checked ~ .line_bottom{
+.checker:checked ~ .line_top,
+.checker:checked ~ .line_bottom {
   opacity: 0;
 }
-.line_mid{
+.line_mid {
   position: relative;
-  height: .5rem;
+  height: 0.5rem;
   width: 4rem;
   margin: 5px 0;
   border-radius: 1rem;
-  transition: .3s all linear;
+  transition: 0.3s all linear;
 }
-.line_mid1, .line_mid2{
+.line_mid1,
+.line_mid2 {
   background-color: #de4b43;
   position: absolute;
   top: 0;
   left: 0;
   margin: 0;
 }
-.-cross1{
+.-cross1 {
   background-color: #2f375b;
   transform: rotate(45deg);
 }
-.-cross2{
+.-cross2 {
   background-color: #2f375b;
   transform: rotate(-225deg);
 }
 
-
 /* close_door animation of burger menu */
-.close_door{
+.close_door {
   position: fixed;
   left: 0;
   top: 0;
@@ -119,15 +118,14 @@ input.checker{
   display: flex;
   opacity: 0;
   z-index: -2;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 }
-.-show{
+.-show {
   opacity: 1;
   z-index: 100;
 }
 
-
-.showcase{
+.showcase {
   background-color: #2f375b;
   color: #fff;
   display: flex;
@@ -136,7 +134,7 @@ input.checker{
   flex: 1;
   transform: translateX(-100%);
 }
-.menu{
+.menu {
   background-color: #fec240;
   color: #2f375b;
   flex: 1;
@@ -146,43 +144,40 @@ input.checker{
   align-items: center;
 }
 
-.showcase_container{
+.showcase_container {
   width: 300px;
   height: 300px;
   position: relative;
   overflow: hidden;
 }
 
-ul.showcase_menu{
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-width: 100%;
-height: 100%;
-overflow: hidden;
+ul.showcase_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-.showcase_menu_list{
+.showcase_menu_list {
   position: absolute;
   left: 0;
   top: 100%;
   height: 100%;
   width: 100%;
-  transition: .2s;
+  transition: 0.2s;
 }
-li.showcase_menu_list:first-child{
+li.showcase_menu_list:first-child {
   top: 0;
 }
-.showcase_menu_list img{
+.showcase_menu_list img {
   height: 100%;
   width: 100%;
 }
 
-
-
-
 /* rightside menu */
-.main_menu{
+.main_menu {
   width: 100%;
   max-height: 100%;
   overflow-y: auto;
@@ -193,90 +188,90 @@ li.showcase_menu_list:first-child{
   align-items: center;
 }
 
-.main_menu a{
+.main_menu a {
   display: block;
   font-size: 3rem;
   text-decoration: none;
   color: #2f375b;
   font-weight: bold;
   padding: 1rem 5rem 1rem 5rem;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
-.main_menu a:hover{
+.main_menu a:hover {
   transform: translateX(1rem);
 }
 
-.-left{
-  animation: slideInLeft .5s forwards;
+.-left {
+  animation: slideInLeft 0.5s forwards;
 }
-.-right{
-  animation: slideInRight .5s forwards;
+.-right {
+  animation: slideInRight 0.5s forwards;
 }
 
-@keyframes slideInLeft{
-  0%{
+@keyframes slideInLeft {
+  0% {
     transform: translateX(-100%);
   }
-  100%{
+  100% {
     transform: translateX(0%);
   }
 }
-@keyframes slideInRight{
-  0%{
+@keyframes slideInRight {
+  0% {
     transform: translateX(100%);
   }
-  100%{
+  100% {
     transform: translateX(0%);
   }
 }
-.-backleft{
-  animation: slideOutLeft .5s forwards;
+.-backleft {
+  animation: slideOutLeft 0.5s forwards;
 }
-.-backright{
-  animation: slideOutRight .5s forwards;
+.-backright {
+  animation: slideOutRight 0.5s forwards;
 }
 
-@keyframes slideOutLeft{
-  0%{
+@keyframes slideOutLeft {
+  0% {
     transform: translateX(0%);
   }
-  100%{
+  100% {
     transform: translateX(-100%);
   }
 }
-@keyframes slideOutRight{
-  0%{
+@keyframes slideOutRight {
+  0% {
     transform: translateX(0%);
   }
-  100%{
+  100% {
     transform: translateX(100%);
   }
 }
 
 /* RWD */
 @media (max-width: 768px) {
-  .main_menu a{
+  .main_menu a {
     font-size: 2rem;
   }
-  .close_door{
+  .close_door {
     flex-direction: column-reverse;
   }
-  .showcase{
-    flex: .5;
+  .showcase {
+    flex: 0.5;
   }
-  .showcase_container{
+  .showcase_container {
     width: 150px;
     height: 150px;
   }
 }
 @media (max-width: 500px) {
-  .showcase{
+  .showcase {
     display: none;
   }
-  .main_menu{
+  .main_menu {
     margin-bottom: 2rem;
   }
-  .main_menu a{
+  .main_menu a {
     font-size: 2rem;
     padding: 1rem 0;
   }
