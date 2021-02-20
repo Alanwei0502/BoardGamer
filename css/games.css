@@ -2,38 +2,38 @@
 @import "./header.css";
 @import "./footer.css";
 
-html{
-  font-family: 'Microsoft JhengHei';
+html {
+  font-family: "Microsoft JhengHei";
   background-color: #2f375b;
   box-sizing: border-box;
 }
-.wrap{
+.wrap {
   width: 100%;
   margin: 0 auto;
 }
 
 /* 遊戲列表 */
-main{
+main {
   display: flex;
   align-items: flex-start;
 }
-section.all_game{
+section.all_game {
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-div.game_list ul{
+div.game_list ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-div.game_list ul li{
+div.game_list ul li {
   perspective: 1000px;
   perspective-origin: 0% 0%;
   margin: 2rem;
 }
-a.game{
+a.game {
   display: block;
   text-decoration: none;
   color: #2f375b;
@@ -42,190 +42,190 @@ a.game{
   transform-style: preserve-3d;
   transform: translateZ(-8rem);
   font-weight: bold;
-  transition: .5s;
+  transition: 0.5s;
 }
-a.game:hover{
+a.game:hover {
   transform: rotateY(-80deg) translateZ(2rem);
 }
-div.photo, div.info{
+div.photo,
+div.info {
   position: absolute;
   width: 16rem;
   height: 16rem;
   backface-visibility: hidden;
 }
-div.photo{
+div.photo {
   width: 100%;
   height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   transform: translateZ(8rem);
-  box-shadow: inset 0px 0px 2.5rem rgba(255,255,255,0);
-  transition: box-shadow .5s;
+  box-shadow: inset 0px 0px 2.5rem rgba(255, 255, 255, 0);
+  transition: box-shadow 0.5s;
 }
-div.info{
+div.info {
   background-color: #fec240;
   transform: rotateY(90deg) translateZ(8rem);
 }
-a.game::after{
-  content: '';
+a.game::after {
+  content: "";
   width: 16rem;
   height: 16rem;
   position: absolute;
-  box-shadow: 0 2rem 3rem rgba(0,0,0,0.3);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
   bottom: 0;
   transform: rotateX(90deg) translateY(8rem);
   transform-origin: 100% 100%;
-  transition: .5s;
+  transition: 0.5s;
 }
-a.game:hover::after{
-  box-shadow: 1.2rem -0.3rem 3rem rgba(0,0,0,0.3);
+a.game:hover::after {
+  box-shadow: 1.2rem -0.3rem 3rem rgba(0, 0, 0, 0.3);
 }
 a.game:hover .photo {
-  box-shadow: inset 17.5rem 0px 2.5rem rgba(255,255,255,0.8);
+  box-shadow: inset 17.5rem 0px 2.5rem rgba(255, 255, 255, 0.8);
 }
 a.game:hover .info {
-  box-shadow: inset 0px 0px 2.5rem rgba(0,0,0,0);
+  box-shadow: inset 0px 0px 2.5rem rgba(0, 0, 0, 0);
 }
-.info{
-  box-shadow: inset -17.5rem 0px 2.5rem rgba(0,0,0,0.5);
-  transition: box-shadow .5s;
+.info {
+  box-shadow: inset -17.5rem 0px 2.5rem rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.5s;
 }
-.info h2{
+.info h2 {
   font-size: 2em;
-  text-shadow: 0px 1px 1px rgba(0,0,0,1);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
   padding: 0.6rem 1.25rem 0;
 }
-.info p{
+.info p {
   font-size: 1.2rem;
   margin-top: 1rem;
   line-height: 1.4rem;
   padding: 1.2rem 1.25rem;
 }
 
-li.pictomania .photo{
+li.pictomania .photo {
   background-image: url("../images/games/pictomania.jpg");
 }
-li.seven_wonders .photo{
+li.seven_wonders .photo {
   background-image: url("../images/games/seven_wonders.jpg");
 }
-li.ghost .photo{
+li.ghost .photo {
   background-image: url("../images/games/ghost.jpg");
 }
-li.game_of_throne .photo{
+li.game_of_throne .photo {
   background-image: url("../images/games/game_of_throne.jpg");
 }
-li.avalon .photo{
+li.avalon .photo {
   background-image: url("../images/games/avalon.jpg");
   background-size: cover;
 }
-li.bang .photo{
+li.bang .photo {
   background-image: url("../images/games/bang.jpg");
   background-size: cover;
 }
-li.love_letter .photo{
+li.love_letter .photo {
   background-image: url("../images/games/love_letter.jpg");
   background-size: cover;
 }
-li.shashawa .photo{
+li.shashawa .photo {
   background-image: url("../images/games/shashawa.jpg");
 }
-li.cluedo .photo{
+li.cluedo .photo {
   background-image: url("../images/games/cluedo.jpg");
   background-size: cover;
 }
-li.yellow_cards .photo{
+li.yellow_cards .photo {
   background-image: url("../images/games/yellow_cards.jpg");
 }
-li.unlock .photo{
+li.unlock .photo {
   background-image: url("../images/games/unlock.jpg");
   background-size: cover;
 }
-li.hab_gut .photo{
+li.hab_gut .photo {
   background-image: url("../images/games/hab_gut.jpg");
   background-size: cover;
 }
-li.catan .photo{
+li.catan .photo {
   background-image: url("../images/games/catan.jpg");
   background-position: center;
   background-size: cover;
 }
-li.the_mind .photo{
-  background-image: url("../images/games/the_mind.png");
+li.the_mind .photo {
+  background-image: url("../images/games/the_mind.jpg");
   background-size: cover;
 }
-li.kuhhandle .photo{
+li.kuhhandle .photo {
   background-image: url("../images/games/kuhhandle.png");
   background-size: cover;
 }
-li.cantstop .photo{
+li.cantstop .photo {
   background-image: url("../images/games/cantstop.jpg");
   background-size: cover;
 }
-li.carcassonne .photo{
+li.carcassonne .photo {
   background-image: url("../images/games/carcassonne.jpg");
   background-size: cover;
 }
-li.citadels .photo{
+li.citadels .photo {
   background-image: url("../images/games/citadels.jpg");
   background-size: cover;
 }
-li.coal_baron .photo{
+li.coal_baron .photo {
   background-image: url("../images/games/coal_baron.jpg");
   background-size: cover;
 }
-li.manila .photo{
+li.manila .photo {
   background-image: url("../images/games/manila.jpg");
   background-size: cover;
 }
-li.ouat .photo{
+li.ouat .photo {
   background-image: url("../images/games/ouat.png");
   background-size: cover;
 }
-li.splendor .photo{
+li.splendor .photo {
   background-image: url("../images/games/splendor.jpg");
   background-size: cover;
 }
-li.stoneage .photo{
+li.stoneage .photo {
   background-image: url("../images/games/stoneage.jpg");
   background-size: cover;
 }
-li.take6 .photo{
+li.take6 .photo {
   background-image: url("../images/games/take6.jpg");
   background-size: cover;
 }
-li.talkn_guess .photo{
+li.talkn_guess .photo {
   background-image: url("../images/games/talkn_guess.jpg");
   background-size: cover;
 }
-li.betrayal-house-hill .photo{
+li.betrayal-house-hill .photo {
   background-image: url("../images/games/betrayal-house-hill.jpg");
   background-size: cover;
 }
 
-main > section.all_game{
+main > section.all_game {
   position: relative;
 }
-.all_game button{
+.all_game button {
   color: #fff;
   background-color: #de4b43;
   outline: none;
   border: 0;
   font-size: 1.5rem;
   margin: 2rem;
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 2rem;
-  font-family: 'Microsoft JhengHei';
+  font-family: "Microsoft JhengHei";
   font-weight: bold;
   cursor: pointer;
 }
-.all_game button:hover{
+.all_game button:hover {
   color: #2f375b;
   background-color: #fec240;
 }
 
-
 /* filter filter filter filter filter */
-aside.filter{
+aside.filter {
   position: sticky;
   top: 7rem;
   right: 0px;
@@ -237,39 +237,42 @@ aside.filter{
   width: 22rem;
   border-radius: 1rem 0 0 1rem;
 }
-.filter label, .filter input, .filter select{
+.filter label,
+.filter input,
+.filter select {
   display: block;
-  font-family: 'Microsoft JhengHei';
+  font-family: "Microsoft JhengHei";
   border-radius: 1rem;
   width: 100%;
 }
-.filter .search_icon{
+.filter .search_icon {
   position: relative;
   width: 99%;
 }
-.filter .search_icon input{
+.filter .search_icon input {
   width: 80%;
   padding-left: 3.5rem;
 }
-.filter .search_icon img{
+.filter .search_icon img {
   position: absolute;
   top: 5px;
-  left: .5rem;
+  left: 0.5rem;
   width: 2.5rem;
   height: 2.5rem;
 }
-.filter label{
+.filter label {
   margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
-.filter h2{
+.filter h2 {
   font-size: 2rem;
   width: 100%;
   white-space: nowrap;
   font-weight: bold;
 }
-.filter input, .filter select{
+.filter input,
+.filter select {
   margin-top: 1rem;
   outline: none;
   border: 0;
@@ -277,35 +280,36 @@ aside.filter{
   font-size: 1.5rem;
 }
 
-.filter select{
+.filter select {
   cursor: pointer;
 }
 
 /* RWD */
 @media (max-width: 1770px) {
-  div.game_list ul li{
+  div.game_list ul li {
     margin: 3rem 5%;
   }
+}
 @media (max-width: 1024px) {
-  main{
+  main {
     flex-direction: column-reverse;
     align-items: center;
   }
 
-  aside.filter{
+  aside.filter {
     position: static;
     top: 8rem;
     display: block;
     width: 90%;
     border-radius: 1rem;
   }
-  .filter label{
+  .filter label {
     margin-top: 2rem;
     font-size: 2rem;
     font-weight: bold;
   }
 
-  a.game{
+  a.game {
     width: 100%;
     height: 100%;
     transform-style: flat;
@@ -316,33 +320,34 @@ aside.filter{
     align-items: stretch;
     background-color: #fec240;
   }
-  a.game:hover{
+  a.game:hover {
     transform: rotateY(0deg) translateZ(0rem);
   }
-  div.photo, div.info{
+  div.photo,
+  div.info {
     position: static;
     height: 100%;
     backface-visibility: visible;
   }
-  div.photo{
+  div.photo {
     transform: translateZ(0rem);
     box-shadow: none;
     transition: 0s;
     width: 16rem;
     height: 16rem;
   }
-  div.info{
+  div.info {
     transform: rotateY(0deg) translateZ(0rem);
     flex-grow: 1;
   }
-  div.game_list ul li{
+  div.game_list ul li {
     perspective: none;
     perspective-origin: 50% 50%;
-    margin: 2rem  0;
+    margin: 2rem 0;
     width: 100%;
   }
-  a.game::after{
-    content: '';
+  a.game::after {
+    content: "";
     width: 0;
     position: static;
     box-shadow: none;
@@ -351,7 +356,7 @@ aside.filter{
     transform-origin: 50% 50%;
     transition: 0s;
   }
-  a.game:hover::after{
+  a.game:hover::after {
     box-shadow: none;
   }
   a.game:hover .photo {
@@ -360,44 +365,44 @@ aside.filter{
   a.game:hover .info {
     box-shadow: none;
   }
-  .info{
+  .info {
     box-shadow: none;
     transition: 0s;
   }
-  .info h2{
+  .info h2 {
     font-size: 3em;
     text-shadow: none;
     padding: 0.6rem 1rem 0;
   }
-  .info p{
+  .info p {
     font-size: 1.5rem;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     line-height: 2rem;
     padding: 1.2rem 1.25rem;
   }
 }
 
 @media (max-width: 768px) {
-  html{
+  html {
     font-size: 12px;
   }
-  div.game_list ul li{
+  div.game_list ul li {
     display: inline-block;
     width: auto;
     height: auto;
     margin: 2rem 1rem;
   }
-  div.info{
+  div.info {
     flex-grow: 0;
     display: none;
   }
-  .main_menu a{
+  .main_menu a {
     font-size: 3rem;
   }
-  .filter .search_icon input{
+  .filter .search_icon input {
     width: 70vw;
   }
-  section.all_game{
+  section.all_game {
     width: 100%;
   }
 }

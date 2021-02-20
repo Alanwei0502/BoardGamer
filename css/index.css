@@ -171,7 +171,7 @@ main nav {
   background-image: url("../images/home/playing_board_games.jpg");
 }
 .three_mains a.game_tutorial {
-  background-image: url("../images/home/catan.jpg");
+  background-image: url("../images/home/catan.png");
 }
 .three_mains h2 {
   position: absolute;
@@ -294,7 +294,7 @@ div.slider-row a.news2 {
   background-image: url("../images/home/benefits.jpg");
 }
 div.slider-row a.news3 {
-  background-image: url("../images/home/gokids_con.jpg");
+  background-image: url("../images/home/gokids_con.png");
   background-position: top;
 }
 div.slider-row a.news4 {
